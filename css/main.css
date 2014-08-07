@@ -82,11 +82,16 @@ article {
   text-align: center;
 }
 
+article a {
+  text-decoration: none;
+}
+
 article h1 {
   font-size: 3em;
   text-align: left;
   text-decoration: none;
   background-color: #272822;
+  background-image: url('../img/names.png');
   margin: 10px 0px;
   padding: 1.5em 0px 1.5em 1.5em;
   background-size: 1360px;
@@ -94,7 +99,7 @@ article h1 {
   box-shadow: inset 0px 0px 10px #000000;
 }
 
-article h1 a {
+article a h1 {
   color: #efb3db;
   text-decoration: none;
 }
