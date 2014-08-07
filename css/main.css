@@ -4,7 +4,8 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: #51473b;
+  background-color: #3b2913;
+  color: #3b2913;
 }
 
 .wrapper {
@@ -15,7 +16,8 @@ body {
 
 header {
   padding: 10px;
-  background-color: #b5a48f;
+  background-color: #b1e0cd;
+  box-shadow: 0px 2px 5px #000000;
 }
 
 header h1 {
@@ -41,17 +43,21 @@ header nav ul a {
   color: #3b2913;
   text-decoration: none;
   padding: 10px 10px;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
+  -webkit-transition: background-color .3s, color .3s;
+  transition: background-color .3s, color .3s;
 }
 header nav ul a:hover {
-  background-color: #897966;
+  background-color: #99d0bf;
+  color: #09035f;
 }
 header nav ul a:active {
   
 }
 header nav ul a:visited {
   color: #3b2913;
+}
+header nav ul a:visited:hover {
+  color: #09035f;
 }
 
 header nav ul a li {
@@ -69,6 +75,7 @@ header nav ul a li {
 section {
   background-color: #897966;
   padding: 20px;
+  box-shadow: 0px 0px 10px #000000;
 }
 
 article {
@@ -79,15 +86,16 @@ article h1 {
   font-size: 3em;
   text-align: left;
   text-decoration: none;
-  background-color: #e5e5e5;
-  margin: 0px;
+  background-color: #272822;
+  margin: 10px 0px;
   padding: 1.5em 0px 1.5em 1.5em;
   background-size: 1360px;
   background-position: right top;
+  box-shadow: inset 0px 0px 10px #000000;
 }
 
 article h1 a {
-  color: #3b2913;
+  color: #efb3db;
   text-decoration: none;
 }
 
@@ -98,7 +106,7 @@ article p {
 .square {
   height: 14em;
   width: 14em;
-  background-color: #b5a48f;
+  background-color: #9e9da6;
   display: inline-block;
   margin: 10px;
 }
@@ -115,7 +123,7 @@ article p {
 }
 
 .square .album .overlay {
-  background-color: #443523;
+  background-color: #202020;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -138,17 +146,23 @@ footer {
   left: 0px;
   right: 0px;
   text-align: center;
-  background-color: #b5a48f;
+  background-color: #b1e0cd;
   color: #443523;
   padding: .5em 0px;
+  box-shadow: 0px -2px 5px #000000;
 }
 
 @media (max-width: 1000px) {
+  html,
   body {
     background-color: #897966;
   }
   .positioning {
     padding: 0em 0em 2em;
     width: 100%;
+  }
+  section {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px;
   }
 }
