@@ -51,14 +51,15 @@ article a h1 {
   color: #e5e5e5;
 }
 
-.sidebar {
-  background-color: #23232b;
-}
-
 footer {
   background-color: #b1e0cd;
   color: #443523;
   box-shadow: 0px 0px 5px #000000;
+}
+
+.sidebar {
+  background-color: #3b2913;
+  color: #b1e0cd;
 }
 
 @media (max-width: 1000px) {
