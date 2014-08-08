@@ -6,90 +6,91 @@
     <title>Media Site</title>
     
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/slider.css" rel="stylesheet" type="text/css">
+    <link href="css/colors.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
     <div class="wrapper">
       <div class="content">
-          <header>
-            <h1>Home</h1>
-            <nav>
-              <ul>
-                <a href="index.html"><li>home
-                </li></a><a href="albums/index.html"><li>albums
-                </li></a><a href="artists/index.html"><li>artists
-                </li></a><a href=""><li>Four
-                </li></a><a href=""><li>Five
-                </li></a><a href=""><li>Six</li></a>
-              </ul>
-            </nav>
-          </header>
-          
-          <div class="positioning full">
-            <section>
-              <article class="slide off" style="background-color: #e5e5e5; color: #0f0f0f;">
-                <div class="inslide">
-                  <img src="img/cyber.png" alt="cyberpunk">
-                </div>
-              </article>
-              <article class="slide off">
-                <div class="inslide">
-                  text 2
-                </div>
-              </article>
-              <article class="slide off" style="background-color: #e5e5e5; color: #0f0f0f;">
-                <div class="inslide">
-                  text 3
-                </div>
-              </article>
-              <article class="slide off">
-                <div class="inslide">
-                  text 4
-                </div>
-              </article>
-            </section>
-            <script src="js/slider.js"></script>
-            <script>
-              var m = new Slider ();
-              var left = document.getElementsByClassName ('left')[0];
-              var right = document.getElementsByClassName ('right')[0];
-              var center = document.getElementsByClassName ('center')[0];
+        <header>
+          <h1>Home</h1>
+          <nav>
+            <ul>
+              <a href="index.html"><li>home
+              </li></a><a href="albums/index.html"><li>albums
+              </li></a><a href="artists/index.html"><li>artists
+              </li></a><a href=""><li>Four
+              </li></a><a href=""><li>Five
+              </li></a><a href=""><li>Six</li></a>
+            </ul>
+          </nav>
+        </header>
+        
+        <div class="positioning full">
+          <section>
+            <article class="slide off">
+              <div class="inslide">
+                <img src="img/cyber.png" alt="cyberpunk">
+              </div>
+            </article>
+            <article class="slide off">
+              <div class="inslide">
+                text 2
+              </div>
+            </article>
+            <article class="slide off">
+              <div class="inslide">
+                text 3
+              </div>
+            </article>
+            <article class="slide off">
+              <div class="inslide">
+                text 4
+              </div>
+            </article>
+          </section>
+          <script src="js/slider.js"></script>
+          <script>
+            var m = new Slider ();
+            var left = document.getElementsByClassName ('left')[0];
+            var right = document.getElementsByClassName ('right')[0];
+            var center = document.getElementsByClassName ('center')[0];
+            
+            setInterval (function () {
+              left = document.getElementsByClassName ('left')[0];
+              right = document.getElementsByClassName ('right')[0];
+              center = document.getElementsByClassName ('center')[0];
               
-              setInterval (function () {
+              left.onclick = function () {
+                m.left ();
+                left.onclick = function () {}
                 left = document.getElementsByClassName ('left')[0];
                 right = document.getElementsByClassName ('right')[0];
                 center = document.getElementsByClassName ('center')[0];
-                
-                left.onclick = function () {
-                  m.left ();
-                  left.onclick = function () {}
-                  left = document.getElementsByClassName ('left')[0];
-                  right = document.getElementsByClassName ('right')[0];
-                  center = document.getElementsByClassName ('center')[0];
-                }
-                right.onclick = function () {
-                  m.right ();
-                  right.onclick = function () {}
-                  left = document.getElementsByClassName ('left')[0];
-                  right = document.getElementsByClassName ('right')[0];
-                  center = document.getElementsByClassName ('center')[0];
-                }
-                center.onclick = function () {
-                  m.right ();
-                  center.onclick = function () {}
-                  left = document.getElementsByClassName ('left')[0];
-                  right = document.getElementsByClassName ('right')[0];
-                  center = document.getElementsByClassName ('center')[0];
-                }
-              }, 100);
-            </script>
-          </div>
-          
-          <footer>
-            &copy; Riley Trautman 2014
-          </footer>
-      </div>
-      <div class="sidebar">
+              }
+              right.onclick = function () {
+                m.right ();
+                right.onclick = function () {}
+                left = document.getElementsByClassName ('left')[0];
+                right = document.getElementsByClassName ('right')[0];
+                center = document.getElementsByClassName ('center')[0];
+              }
+              center.onclick = function () {
+                m.right ();
+                center.onclick = function () {}
+                left = document.getElementsByClassName ('left')[0];
+                right = document.getElementsByClassName ('right')[0];
+                center = document.getElementsByClassName ('center')[0];
+              }
+            }, 100);
+          </script>
+        </div>
+        
+        <footer>
+          &copy; Riley Trautman 2014
+        </footer>
       </div>
     </div>
   </body>

@@ -1,0 +1,28 @@
+.slide {
+  position: absolute;
+  text-align: left;
+  width: 90%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: left .6s, opacity .6s;
+  transition: left .6s, opacity .6s;
+}
+.slide.left { left: -85%; }
+.slide.center {
+  left: 5%;
+  z-index: 1;
+}
+.slide.right { left: 95%; }
+.slide.offone { left: -175%; }
+.slide.offtwo { left: 185%; }
+
+.slide.center { box-shadow: 0px 0px 5px #000000; }
+.slide.off, .slide.offone, .slide.offtwo { opacity: 0; }
+
+.inslide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}

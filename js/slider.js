@@ -65,7 +65,6 @@ function Slider () {
   
   this.left = function () {
     clearInterval (sl.slider);
-    console.log(i);
     for (var j = 0; j < i.length; j++) {
       i[j]-= 2;
       if (i[j] == slides.length) {

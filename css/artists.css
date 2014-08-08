@@ -1,0 +1,17 @@
+article a h1 {
+  font-size: 3em;
+  text-align: left;
+  text-decoration: none;
+  margin: 10px 0px;
+  padding: 1.5em 0px 1.5em 1.5em;
+  background-position: right top;
+  text-decoration: none;
+}
+
+article h1 p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-size: .35em;
+  font-weight: 300;
+}

@@ -4,8 +4,6 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: #23232b;
-  color: #d4d4d4;
 }
 
 .wrapper {
@@ -17,15 +15,11 @@ body {
 .content {
     position: absolute;
     min-height: 100%;
-    min-width: 450px;
-    width: 80%;
+    width: 100%;
 }
 
 header {
   padding: 10px;
-  background-color: #0f0f0f;
-  color: #c939de;
-  box-shadow: inset 0px 0px 5px #000000;
 }
 
 header h1 {
@@ -47,35 +41,12 @@ header nav ul {
 }
 
 header nav ul a {
-  color: #c939de;
   text-decoration: none;
   padding: 10px 10px;
-  -webkit-transition: background-color .3s, color .3s;
-  transition: background-color .3s, color .3s;
-}
-header nav ul a:hover {
-  background-color: #995dde;
-  color: #09035f;
-}
-header nav ul a:active {
-  
-}
-header nav ul a:visited {
-  color: #c939de;
-}
-header nav ul a:visited:hover {
-  color: #09035f;
 }
 
 header nav ul a li {
   display: inline-block;
-}
-
-.home {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  z-index: 2;
 }
 
 .positioning {
@@ -86,76 +57,8 @@ header nav ul a li {
   margin: 0px auto;
 }
 
-.full {
-  position: absolute;
-  top: 9.14em;
-  bottom: 2.2em;
-  left: 0em;
-  right: 0em;
-  width: 100%;
-  padding: 0px;
-  max-width: none;
-}
-
-.full section {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  padding: 0px;
-  box-shadow: 0px 0px 0px;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  text-align: left;
-  width: 90%;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: left .6s, opacity .6s;
-  transition: left .6s, opacity .6s;
-}
-.slide.left {
-  left: -85%;
-}
-.slide.center {
-  left: 5%;
-  z-index: 1;
-  box-shadow: 0px 0px 5px #000000;
-}
-.slide.right {
-  left: 95%;
-}
-.slide.offone {
-  left: -175%;
-  opacity: 0;
-}
-.slide.offtwo {
-  left: 185%;
-  opacity: 0;
-}
-.slide.off {
-  opacity: 0;
-}
-
-.inslide {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-}
-
-.inslide img {
-    width: 100%;
-}
-
 section {
-  background-color: #0f0f0f;
   padding: 20px;
-  box-shadow: inset 0px 0px 10px #000000;
 }
 
 article {
@@ -166,73 +69,8 @@ article a {
   text-decoration: none;
 }
 
-article h1 {
-  font-size: 3em;
-  text-align: left;
-  text-decoration: none;
-  background-color: #272822;
-  background-image: url('../img/names.png');
-  margin: 10px 0px;
-  padding: 1.5em 0px 1.5em 1.5em;
-  background-size: 1360px;
-  background-position: right top;
-  box-shadow: 0px 0px 5px #000000;
-}
-
-article a h1 {
-  color: #c939de;
-  text-decoration: none;
-}
-
 article p {
   text-align: left;
-}
-
-.square {
-  height: 14em;
-  width: 14em;
-  background-color: #9e9da6;
-  display: inline-block;
-  margin: 10px;
-  box-shadow: 0px 0px 5px #000000;
-}
-
-.square .album {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.square .album img {
-  height: 100%;
-  width: 100%;
-}
-
-.square .album .cover {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  box-shadow: 0px 0px 5px #000000;
-}
-
-.square .album .cover .overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  opacity: 0;
-  padding: .5em;
-  text-align: left;
-  background-color: #202020;
-  color: #e5e5e5;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-}
-.square .album .cover .overlay:hover {
-  opacity: .7;
 }
 
 footer {
@@ -241,39 +79,13 @@ footer {
   left: 0px;
   right: 0px;
   text-align: center;
-  background-color: #0f0f0f;
   padding: .5em 0px;
-  box-shadow: inset 0px 0px 5px #000000;
   z-index: 2;
-}
-
-.sidebar {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 20%;
-    background-color: #23232b;
-    height: 100%;
-    min-height: 100%;
-    z-index: 3;
 }
 
 @media (max-width: 1000px) {
   .positioning {
     padding: 0em 0em 2em;
     width: 100%;
-  }
-  section {
-    background-color: transparent;
-    box-shadow: 0px 0px 0px;
-  }
-  article h1 {
-    box-shadow: inset 0px 0px 5px #000000;
-  }
-  .square {
-    box-shadow: 0px 0px 0px #000000;
-  }
-  .square .album .cover {
-    box-shadow: inset 0px 0px 3px #000000;
   }
 }

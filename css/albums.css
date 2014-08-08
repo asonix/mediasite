@@ -1,0 +1,41 @@
+.square {
+  height: 14em;
+  width: 14em;
+  display: inline-block;
+  margin: 10px;
+}
+
+.square .album {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.square .album img {
+  height: 100%;
+  width: 100%;
+}
+
+.square .album .cover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.square .album .cover .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  padding: .5em;
+  text-align: left;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+.square .album .cover .overlay:hover {
+  opacity: .7;
+}
