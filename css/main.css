@@ -14,11 +14,18 @@ body {
   min-width: 450px;
 }
 
+.content {
+    position: absolute;
+    min-height: 100%;
+    min-width: 450px;
+    width: 80%;
+}
+
 header {
   padding: 10px;
   background-color: #0f0f0f;
   color: #c939de;
-  box-shadow: 0px 2px 5px #000000;
+  box-shadow: inset 0px 0px 5px #000000;
 }
 
 header h1 {
@@ -64,6 +71,13 @@ header nav ul a li {
   display: inline-block;
 }
 
+.home {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 2;
+}
+
 .positioning {
   width: 80%;
   max-width: 1400px;
@@ -72,10 +86,76 @@ header nav ul a li {
   margin: 0px auto;
 }
 
+.full {
+  position: absolute;
+  top: 9.14em;
+  bottom: 2.2em;
+  left: 0em;
+  right: 0em;
+  width: 100%;
+  padding: 0px;
+  max-width: none;
+}
+
+.full section {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  padding: 0px;
+  box-shadow: 0px 0px 0px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  text-align: left;
+  width: 90%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: left .6s, opacity .6s;
+  transition: left .6s, opacity .6s;
+}
+.slide.left {
+  left: -85%;
+}
+.slide.center {
+  left: 5%;
+  z-index: 1;
+  box-shadow: 0px 0px 5px #000000;
+}
+.slide.right {
+  left: 95%;
+}
+.slide.offone {
+  left: -175%;
+  opacity: 0;
+}
+.slide.offtwo {
+  left: 185%;
+  opacity: 0;
+}
+.slide.off {
+  opacity: 0;
+}
+
+.inslide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.inslide img {
+    width: 100%;
+}
+
 section {
   background-color: #0f0f0f;
   padding: 20px;
-  box-shadow: 0px 0px 10px #000000;
+  box-shadow: inset 0px 0px 10px #000000;
 }
 
 article {
@@ -114,6 +194,7 @@ article p {
   background-color: #9e9da6;
   display: inline-block;
   margin: 10px;
+  box-shadow: 0px 0px 5px #000000;
 }
 
 .square .album {
@@ -127,21 +208,30 @@ article p {
   width: 100%;
 }
 
-.square .album .overlay {
-  background-color: #202020;
+.square .album .cover {
   position: absolute;
   top: 0px;
   left: 0px;
-  bottom: 0px;
   right: 0px;
+  bottom: 0px;
+  box-shadow: 0px 0px 5px #000000;
+}
+
+.square .album .cover .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   opacity: 0;
-  text-align: left;
-  color: #e5e5e5;
   padding: .5em;
+  text-align: left;
+  background-color: #202020;
+  color: #e5e5e5;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
 }
-.square .album .overlay:hover {
+.square .album .cover .overlay:hover {
   opacity: .7;
 }
 
@@ -153,7 +243,19 @@ footer {
   text-align: center;
   background-color: #0f0f0f;
   padding: .5em 0px;
-  box-shadow: 0px -2px 5px #000000;
+  box-shadow: inset 0px 0px 5px #000000;
+  z-index: 2;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+    background-color: #23232b;
+    height: 100%;
+    min-height: 100%;
+    z-index: 3;
 }
 
 @media (max-width: 1000px) {
@@ -164,5 +266,14 @@ footer {
   section {
     background-color: transparent;
     box-shadow: 0px 0px 0px;
+  }
+  article h1 {
+    box-shadow: inset 0px 0px 5px #000000;
+  }
+  .square {
+    box-shadow: 0px 0px 0px #000000;
+  }
+  .square .album .cover {
+    box-shadow: inset 0px 0px 3px #000000;
   }
 }
