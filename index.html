@@ -55,34 +55,34 @@
 	  <script src="js/sectionResize.js"></script>
           <script>
             var m = new Slider ();
-            var left = document.getElementsByClassName ('left')[0];
-            var right = document.getElementsByClassName ('right')[0];
+            var left   = document.getElementsByClassName ('left')[0];
+            var right  = document.getElementsByClassName ('right')[0];
             var center = document.getElementsByClassName ('center')[0];
             
             setInterval (function () {
-              left = document.getElementsByClassName ('left')[0];
-              right = document.getElementsByClassName ('right')[0];
+              left   = document.getElementsByClassName ('left')[0];
+              right  = document.getElementsByClassName ('right')[0];
               center = document.getElementsByClassName ('center')[0];
               
               left.onclick = function () {
                 m.left ();
                 left.onclick = function () {}
-                left = document.getElementsByClassName ('left')[0];
-                right = document.getElementsByClassName ('right')[0];
+                left   = document.getElementsByClassName ('left')[0];
+                right  = document.getElementsByClassName ('right')[0];
                 center = document.getElementsByClassName ('center')[0];
               }
               right.onclick = function () {
                 m.right ();
                 right.onclick = function () {}
-                left = document.getElementsByClassName ('left')[0];
-                right = document.getElementsByClassName ('right')[0];
+                left   = document.getElementsByClassName ('left')[0];
+                right  = document.getElementsByClassName ('right')[0];
                 center = document.getElementsByClassName ('center')[0];
               }
               center.onclick = function () {
                 m.right ();
                 center.onclick = function () {}
-                left = document.getElementsByClassName ('left')[0];
-                right = document.getElementsByClassName ('right')[0];
+                left   = document.getElementsByClassName ('left')[0];
+                right  = document.getElementsByClassName ('right')[0];
                 center = document.getElementsByClassName ('center')[0];
               }
             }, 100);

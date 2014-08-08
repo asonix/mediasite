@@ -1,9 +1,13 @@
-function sectionResize()
-{
-    var secDim=document.getElementById('sectionResize');
-    secDim.style.height=(parseInt(secDim.style.width)/2)+'px';
-    alert("Changed");
+function sectionResize () {
+    var section = document.getElementsByTagName ('section')[0];
+    section.style.height = section.clientWidth * .45 + 'px';
+    console.log (section.clientHeight);
+    console.log ('changing');
 }
-window.addEventListener('resize',sectionResize);
-window.addEventListener('load',sectionResize);
-sectionResize();
+window.onresize = function () {
+    sectionResize ();
+}
+window.onload = function () {
+    sectionResize ();
+}
+sectionResize ();

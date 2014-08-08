@@ -16,11 +16,12 @@ body {
     position: absolute;
     min-height: 100%;
     width: 100%;
-    overflow:hidden;
 }
 
 header {
+  position: relative;
   padding: 10px;
+  z-index: 2;
 }
 
 header h1 {
@@ -52,15 +53,14 @@ header nav ul a li {
 
 .positioning {
   width: 80%;
-  max-width: 100%;
+  max-width: 1400px;
   min-width: 450px;
-  max-height:100%;
-  margin: 0px;
+  padding: 4em 0px 6em;
+  margin: 0px auto;
 }
 
 section {
   padding: 20px;
-  max-width:100%;
 }
 
 article {
