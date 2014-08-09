@@ -11,12 +11,12 @@
     <link href="css/colors.css" rel="stylesheet" type="text/css">
   </head>
 
-  <body>
+  <body class="home">
     <div class="wrapper">
       <div class="content">
         <header>
-          <h1>Home</h1>
-          <nav>
+          <h1>Name of our thing
+          </h1><nav>
             <ul>
               <a href="index.html"><li>home
               </li></a><a href="albums/index.html"><li>albums
@@ -28,10 +28,10 @@
           </nav>
         </header>
         
-        <div class="positioning full" id="sectionResizable">
-          <section id="sectionResizable">
+        <div class="positioning full">
+          <section>
             <article class="slide off">
-              <div class="inslide" id="sectionResizable">
+              <div class="inslide">
                 <img src="img/tupromo.png" alt="cyberpunk">
               </div>
             </article>
@@ -51,39 +51,134 @@
               </div>
             </article>
           </section>
+        
+          <section>
+            <article>
+              <div class="box">
+                <div class="heading">
+                  
+                </div>
+                <p>
+                  Okay, so let's see if I can properly put this into words...
+                </p>
+                <p>
+                  So, the nice-looking special effect where we have four images
+                  sliding to the left every now and then is going to be referred
+                  to, as a whole (contained in a wrapper) as the Slider Plugin.
+                  I'll just refer to its width:height ratio as its ratio,
+                  typically being 2:1.
+                </p>
+                <p>
+                  First issue (easy, and I think it was implemented before), the
+                  Slider Plugin seems to have no background color of its own. That
+                  is what was making me think it stretches, vertically.
+                </p>
+                <p>
+                  Second issue is that it is only partially handling resizing
+                  right. Currently it maintains the aspect ratio, but this causes
+                  some cosmetic issues when the browser is at certain sizes.
+                </p>
+                <p>
+                  Case 1: If the browser window is resized appropriately, it's
+                  possible for the Slider Plugin to fit perfectly within the site
+                  so that there is no space between the bottom of the Slider Plugin
+                  and the bottom of the browser window (the footer is underneath,
+                  and you'd have to scroll to reach it). This is what the site
+                  should look like at all times, even when resizing, except for the
+                  other case.
+                </p>
+                <p>
+                  Case 2: If the browser window is resized in portrait-like
+                  dimensions, y'know, so that the width being smaller than the
+                  example above would need to work, it causes the height of the
+                  Slider Plugin to decrease, creating space between it and the
+                  bottom of the site. Text and the footer would go in that space,
+                  so it's entirely okay here.
+                </p>
+                <p>
+                  Case 3: If the browser window is too large, the Slider Plugin
+                  starts "clipping" through the bottom of the browser window. We
+                  can fix this by limiting the max width of the Slider Plugin
+                  (calculated according to the user's browser window height
+                  dimension). This would allow case 1 to be fulfilled except that
+                  it creates horizontal space to the right of the Slider Plugin.
+                  How do we fix this?
+                </p>
+                <p>
+                  We fix this by introducing the Sidebar (for navigation). When the
+                  size gets large, we start including the Sidebar and adjust its
+                  width to make up the remaining space. That's why it's good for
+                  the logo and some text to go in that area. We'll see how it
+                  works, it should look good for most sensibly-oriented monitors
+                  and at least function correctly for all monitors.
+                </p>
+                </div>
+            </article>
+            <article>
+              <div class="box">
+                <div class="heading">
+                  
+                </div>
+                <p>
+                  so, to represent it with text
+                  </br>
+                  Perfect size:
+                  </br>
+                  +-----------------------+
+                  </br>
+                  |[_____________][]|
+                  </br>
+                  |[_____________][]|
+                  </br>
+                  +-----------------------+
+                  </br>
+                  </br>
+                  Large size:
+                  </br>
+                  +---------------------------+
+                  </br>
+                  |[_____________][___]|
+                  </br>
+                  |[_____________][___]|
+                  </br>
+                  +---------------------------+
+                  </br>
+                  </br>
+                  Small size:
+                  </br>
+                  +---------------+
+                  </br>
+                  |[________][]|
+                  </br>
+                  |texttextte[]|
+                  </br>
+                  |texttextte[]|
+                  </br>
+                  |footerfoot[]|
+                  </br>
+                  +---------------+
+                  </br>
+                  
+                  I hope that comes out right...
+                </p>
+              </div>
+            </article>
+          </section>
+          
           <script src="js/slider.js"></script>
 	  <script src="js/sectionResize.js"></script>
           <script>
             var m = new Slider ();
-            var left   = document.getElementsByClassName ('left')[0];
-            var right  = document.getElementsByClassName ('right')[0];
-            var center = document.getElementsByClassName ('center')[0];
             
             setInterval (function () {
-              left   = document.getElementsByClassName ('left')[0];
-              right  = document.getElementsByClassName ('right')[0];
-              center = document.getElementsByClassName ('center')[0];
-              
-              left.onclick = function () {
+              document.getElementsByClassName ('left')[0].onclick = function () {
                 m.left ();
-                left.onclick = function () {}
-                left   = document.getElementsByClassName ('left')[0];
-                right  = document.getElementsByClassName ('right')[0];
-                center = document.getElementsByClassName ('center')[0];
               }
-              right.onclick = function () {
+              document.getElementsByClassName ('right')[0].onclick = function () {
                 m.right ();
-                right.onclick = function () {}
-                left   = document.getElementsByClassName ('left')[0];
-                right  = document.getElementsByClassName ('right')[0];
-                center = document.getElementsByClassName ('center')[0];
               }
-              center.onclick = function () {
+              document.getElementsByClassName ('center')[0].onclick = function () {
                 m.right ();
-                center.onclick = function () {}
-                left   = document.getElementsByClassName ('left')[0];
-                right  = document.getElementsByClassName ('right')[0];
-                center = document.getElementsByClassName ('center')[0];
               }
             }, 100);
           </script>
