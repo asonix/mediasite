@@ -1,20 +1,23 @@
 .wrapper {
     overflow-x: hidden;
+    position: absolute;
+    left: 0px;
+    right: 185px;
+    -webkit-transition: right .3s;
+    transition: right .3s;
 }
 .content {
     position: absolute;
     left: 0%;
     top: 0px;
-    right: 200px;
+    right: 0px;
     width: auto;
     min-height: 100%;
     min-width: 450px;
-    -webkit-transition: right .3s;
-    transition: right .3s;
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     width: 200px;
@@ -34,8 +37,8 @@
     height: 50px;
     line-height: 50px;
     text-align: center;
-    -webkit-transition: display .3s;
-    transition: display .3s;
+    -webkit-transition: display .3s, margin-left .3s, width .3s;
+    transition: display .3s, margin-left .3s, width .3s;
 }
 
 .sidebar a .link .text {
@@ -53,8 +56,8 @@
 }
 
 @media (max-width: 1000px) {
-    .content {
-        right: 50px;
+    .wrapper {
+        right: 35px;
     }
     .sidebar {
         width: 50px;
