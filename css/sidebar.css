@@ -5,20 +5,51 @@
     position: absolute;
     left: 0%;
     top: 0px;
-    right: 250px;
+    right: 200px;
     width: auto;
     min-height: 100%;
     min-width: 450px;
+    -webkit-transition: right .3s;
+    transition: right .3s;
 }
 
 .sidebar {
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 250px;
+    width: 200px;
     height: 100%;
     min-height: 100%;
     z-index: 3;
+    -webkit-transition: width .3s;
+    transition: width .3s;
+}
+
+.sidebar a .link { }
+
+.sidebar a .link .icon {
+    position: relative;
+    display: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition: display .3s;
+    transition: display .3s;
+}
+
+.sidebar a .link .text {
+    display: block;
+    height: 50px;
+    width: 175px;
+    padding-left: 25px;
+    line-height: 50px;
+    -webkit-transition: width .3s, padding-left .3s, display .3s;
+    transition: width .3s, padding-left .3s, display .3s;
+}
+.sidebar a .link .text:hover {
+    width: 150px;
+    padding-left: 40px;
 }
 
 @media (max-width: 1000px) {
@@ -26,6 +57,12 @@
         right: 50px;
     }
     .sidebar {
-        right: -200px;
+        width: 50px;
+    }
+    .sidebar a .link .icon {
+        display: block;
+    }
+    .sidebar a .link .text {
+        display: none;
     }
 }

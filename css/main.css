@@ -64,6 +64,8 @@ header nav ul a li {
   min-width: 450px;
   padding: 4em 0px 6em;
   margin: 0px auto;
+  -webkit-transition: padding .3s, width .3s;
+  transition: padding .3s, width .3s;
 }
 
 section {
