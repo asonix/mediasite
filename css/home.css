@@ -1,8 +1,33 @@
-.home {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  z-index: 2;
+@font-face{
+  font-family: DFI;
+  src: url(../font/DFI.ttf);
+}
+header {
+  padding: 0px;
+  height: 2em;
+  line-height: 2em;
+}
+
+header h1 {
+  font-size: 1em;
+  display: inline-block;
+  padding: 0px;
+  padding-left: .5em;
+  padding-right: .5em;
+  font-weight: normal;
+  font-family:DFI;
+}
+
+header nav {
+  display: inline-block;
+}
+
+header nav ul a {
+  display: inline-block;
+  padding: 0px;
+  padding-left: .5em;
+  padding-right: .5em;
+  line-height: 2em;
 }
 
 .full {
@@ -16,13 +41,8 @@
   overflow:hidden;
 }
 
-.full section {
+section:nth-child(1) {
   position: relative;
-  height: 500px;
-  /*left: 0;*/
-  /*right: 0;*/
-  /*top: 0;*/
-  /*bottom: 0;*/
   padding: 0px;
   overflow:hidden;
   width: 100%;
@@ -31,5 +51,39 @@
 }
 
 .inslide img {
-    width: 100%;
+  width: 100%;
+}
+
+section:nth-child(2) {
+  position: relative;
+  padding: 0px;
+  
+}
+
+section:nth-child(2) article {
+  width: 40%;
+  margin: 0px 5%;
+  padding: 1em 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+section:nth-child(2) article:nth-child(2) {
+  margin-right: 0px;
+}
+
+.box {
+  margin-top: 5px;
+  border: dashed 1px #ffffff;
+}
+
+section:nth-child(2) article p:nth-child(1) {
+  margin-top: 0px;
+}
+section:nth-child(2) article p:last-child {
+  margin-bottom: 0px;
+}
+
+footer {
+  position: fixed;
 }
