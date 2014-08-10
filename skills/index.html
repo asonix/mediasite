@@ -60,6 +60,7 @@
        */
       
       var jsObjBySkill = {};
+            console.log("test");
       
       loadJSON (function (jsObjByPerson) {
         for (var i in jsObjByPerson.person) {
@@ -103,81 +104,80 @@
           }
         }
         
-        window.onload = function () {
-          var columns = document.getElementsByClassName ('list');
-          var left    = columns[0];
-          var center  = columns[1];
-          var right   = columns[2];
-          
-          function loadMiddle (key) {
-            for (var i in jsObjBySkill[key]) {
-              if (jsObjBySkill[key].hasOwnProperty (i)) {
-                var div = document.createElement ('div');
-                div.className = "item";
-                div.innerHTML = i;
-                center.appendChild (div);
-                div.onclick = (function (x) {
-                  return function () {
-                    while (right.getElementsByClassName ('item').length > 0) {
-                      right.removeChild(right.getElementsByClassName ('item')[0]);
-                    }
-                    for (var i in center.getElementsByClassName ('item')) {
-                      center.getElementsByClassName ('item')[i].className = "item";
-                    }
-                    x.className = "item selected";
-                    loadRight (key, x.innerHTML);
-                  }
-                })(div);
-              }
-            }
-            center.getElementsByClassName ('item')[0].className = 'item selected';
-            while (right.getElementsByClassName ('item').length > 0) {
-              right.removeChild(right.getElementsByClassName ('item')[0]);
-            }
-            loadRight (key, center.getElementsByClassName ('item')[0].innerHTML);
-          }
-          
-          function loadRight (key1, key2) {
-            for (var i in jsObjBySkill[key1][key2]) {
-              var div = document.createElement ('div');
-              div.className = "item";
-              div.innerHTML = "<div class=\"name\">" + jsObjBySkill[key1][key2][i].username +
-              "</div>" + jsObjBySkill[key1][key2][i].name +
-              "<div class=\"bio\">" + jsObjBySkill[key1][key2][i].bio + "</div>";
-              right.appendChild (div);
-              div.onclick = (function (x) {
-                return function () {
-                  window.open(jsObjBySkill[key1][key2][x].url + "/index.html", "_self");
-                }
-              })(i);
-            }
-          }
-          
-          for (var i in jsObjBySkill) {
-            if (jsObjBySkill.hasOwnProperty (i)) {
+        console.log(jsObjBySkill);
+        var columns = document.getElementsByClassName ('list');
+        var left    = columns[0];
+        var center  = columns[1];
+        var right   = columns[2];
+        
+        function loadMiddle (key) {
+          for (var i in jsObjBySkill[key]) {
+            if (jsObjBySkill[key].hasOwnProperty (i)) {
               var div = document.createElement ('div');
               div.className = "item";
               div.innerHTML = i;
-              left.appendChild (div);
+              center.appendChild (div);
               div.onclick = (function (x) {
                 return function () {
-                  while (center.getElementsByClassName ('item').length > 0) {
-                    center.removeChild(center.getElementsByClassName ('item')[0]);
+                  while (right.getElementsByClassName ('item').length > 0) {
+                    right.removeChild(right.getElementsByClassName ('item')[0]);
                   }
-                  for (var i in left.getElementsByClassName ('item')) {
-                    left.getElementsByClassName ('item')[i].className = "item";
+                  for (var i in center.getElementsByClassName ('item')) {
+                    center.getElementsByClassName ('item')[i].className = "item";
                   }
                   x.className = "item selected";
-                  loadMiddle (x.innerHTML);
+                  loadRight (key, x.innerHTML);
                 }
               })(div);
             }
           }
-          
-          left.getElementsByClassName ('item')[0].className = 'item selected';
-          loadMiddle (left.getElementsByClassName ('item')[0].innerHTML);
-          
+          center.getElementsByClassName ('item')[0].className = 'item selected';
+          while (right.getElementsByClassName ('item').length > 0) {
+            right.removeChild(right.getElementsByClassName ('item')[0]);
+          }
+          loadRight (key, center.getElementsByClassName ('item')[0].innerHTML);
         }
+        
+        function loadRight (key1, key2) {
+          for (var i in jsObjBySkill[key1][key2]) {
+            var div = document.createElement ('div');
+            div.className = "item";
+            div.innerHTML = "<div class=\"name\">" + jsObjBySkill[key1][key2][i].username +
+            "</div>" + jsObjBySkill[key1][key2][i].name +
+            "<div class=\"bio\">" + jsObjBySkill[key1][key2][i].bio + "</div>";
+            right.appendChild (div);
+            div.onclick = (function (x) {
+              return function () {
+                window.open(jsObjBySkill[key1][key2][x].url + "/index.html", "_self");
+              }
+            })(i);
+          }
+        }
+        
+        for (var i in jsObjBySkill) {
+          if (jsObjBySkill.hasOwnProperty (i)) {
+            var div = document.createElement ('div');
+            div.className = "item";
+            div.innerHTML = i;
+            left.appendChild (div);
+            div.onclick = (function (x) {
+              return function () {
+                while (center.getElementsByClassName ('item').length > 0) {
+                  center.removeChild(center.getElementsByClassName ('item')[0]);
+                }
+                for (var i in left.getElementsByClassName ('item')) {
+                  left.getElementsByClassName ('item')[i].className = "item";
+                }
+                x.className = "item selected";
+                loadMiddle (x.innerHTML);
+              }
+            })(div);
+          }
+        }
+        
+        left.getElementsByClassName ('item')[0].className = 'item selected';
+        loadMiddle (left.getElementsByClassName ('item')[0].innerHTML);
+          
       });
     </script>
   </head>
@@ -192,7 +192,7 @@
               <a href="../index.html"><li>home
               </li></a><a href="../albums/index.html"><li>albums
               </li></a><a href="../artists/index.html"><li>artists
-              </li></a><a href=""><li>Four
+              </li></a><a href="../skills/index.html"><li>Skills
               </li></a><a href=""><li>Five
               </li></a><a href=""><li>Six</li></a>
             </ul>
