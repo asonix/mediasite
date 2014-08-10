@@ -1,0 +1,49 @@
+h1 {
+  margin: 0px;
+  font-size: 2em;
+}
+
+.column {
+  width: 30%;
+  margin-top: 1em;
+  display: inline-block;
+  height: 26em;
+  overflow: hidden;
+}
+
+.column .title {
+  padding: 1em;
+  height: 1.25em;
+  line-height: 1.25em;
+  text-align: left;
+}
+
+.column .list {
+  height: 22.75em;
+  overflow-y: auto;
+}
+
+.column .item {
+  min-height: 1.25em;
+  margin: 1px 0em;
+  padding: .5em;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: height 1.3s;
+  transition: height 1.3s;
+}
+
+.column:nth-child(4) .item {
+  height: 3em;
+}
+.column:nth-child(4) .item:hover {
+  height: auto;
+}
+
+.column .item .name {
+  font-size: 1.5em;
+}
+
+.column .item .bio {
+  margin-top: 10px;
+}
