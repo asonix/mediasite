@@ -101,3 +101,9 @@ footer {
     width: 100%;
   }
 }
+.topbaricon{
+  position:relative;
+  height:16px;
+  width:16px;
+  top:2px;
+}

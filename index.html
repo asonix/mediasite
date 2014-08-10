@@ -11,79 +11,166 @@
     <link href="css/colors.css" rel="stylesheet" type="text/css">
   </head>
 
-  <body>
+  <body class="home">
     <div class="wrapper">
       <div class="content">
         <header>
-          <h1>Home</h1>
-          <nav>
+          <h1><img src="img/icons/circuit.png" class="topbaricon"/> ChipSwaX Network
+          </h1><nav>
             <ul>
-              <a href="index.html"><li>home
-              </li></a><a href="albums/index.html"><li>albums
-              </li></a><a href="artists/index.html"><li>artists
-              </li></a><a href=""><li>Four
-              </li></a><a href=""><li>Five
-              </li></a><a href=""><li>Six</li></a>
+              <a href="index.html"><li>
+              <img src="img/icons/home.png"  class="topbaricon"/> 
+              </li></a><a href="works/index.html"><li>
+              <img src="img/icons/works.png" class="topbaricon"/> 
+              </li></a><a href="groups/index.html"><li>
+              <img src="img/icons/groups.png" class="topbaricon"/> 
+              </li></a><a href="artists/index.html"><li>
+              <img src="img/icons/artists.png" class="topbaricon"/> 
+              </li></a><a href="producers/index.html"><li>
+              <img src="img/icons/producers.png" class="topbaricon"/> 
+              </li></a><a href="djs/index.html"><li>
+              <img src="img/icons/djs.png" class="topbaricon"/>
+              </li></a><a href="voiceartists/index.html"><li>
+              <img src="img/icons/voiceartists.png" class="topbaricon"/> 
+              </li></a><a href="videoartists/index.html"><li>
+              <img src="img/icons/videoeditors.png" class="topbaricon"/> 
+              </li></a><a href="webdevelopers/index.html"><li>
+              <img src="img/icons/webdevelopers.png" class="topbaricon"/> 
+              </li></a>
             </ul>
           </nav>
         </header>
         
-        <div class="positioning full" id="sectionResizable">
-          <section id="sectionResizable">
+        <div class="positioning full">
+          <section>
             <article class="slide off">
-              <div class="inslide" id="sectionResizable">
-                <img src="img/tupromo.png" alt="cyberpunk">
+              <div class="inslide">
+                <img src="img/promos/tupromo.png" alt="cyberpunk">
               </div>
             </article>
             <article class="slide off">
               <div class="inslide">
-                text 2
+                <img src="img/promos/blacksquaresPromo.png" alt="netlabel">
               </div>
             </article>
             <article class="slide off">
               <div class="inslide">
-                text 3
+                <img src="img/promos/githubPromo.png" alt="open source">
               </div>
             </article>
             <article class="slide off">
               <div class="inslide">
-                text 4
+                <img src="img/promos/dinoPlaceholder.png" alt="temporary">
               </div>
             </article>
           </section>
+        
+          <section>
+            <article>
+              <div class="box">
+                <div class="heading">
+                  <h1>What is ChipSwax?</h1>
+                </div>
+                <p>
+                  Over the years, I've developed a network of friends with skills
+		  and talents along with teams and groups for creative projects.
+		  ChipSwax is a public mapping of these connections and a host 
+		  for its content.
+                </p>
+                <p>
+		  The ChipSwax Network is invite-only and tightly-knit as a group.
+		  It's a container for projects of all mediums and styles. We have
+		  netlabels and web shows, code projects and art trades, you get
+		  the picture. We keep ourselves busy.
+                </p>
+                <p>
+		  But the main reason that ChipSwax exists is to serve as a sort
+		  of portfolio profile website for the artists, musicians, and
+		  other people within our groups. I made ChipSwax to show the
+		  potential in the talents of my connections to businesses and
+		  other prospective clients. Exposure is the key term, here.
+                </p>
+                <p>
+		  Despite the website's recent conception, my connections have
+		  been developing talents for years, working towards a stable
+		  living with the use of their talents, if not become entirely
+		  indepedent with them through means of employment.
+                </p>
+                <p>
+		  That's enough talk. We organize ourselves according to skills.
+		  Our developed works contain our completed projects and upcoming
+		  content. Our groups show how we interact and work together.
+                </p>
+		<p>
+		  Take a look.
+		</p>
+                </div>
+            </article>
+            <article>
+              <div class="box">
+                <div class="heading">
+                  
+                </div>
+                <p>
+                  so, to represent it with text
+                  </br>
+                  Perfect size:
+                  </br>
+                  +-----------------------+
+                  </br>
+                  |[_____________][]|
+                  </br>
+                  |[_____________][]|
+                  </br>
+                  +-----------------------+
+                  </br>
+                  </br>
+                  Large size:
+                  </br>
+                  +---------------------------+
+                  </br>
+                  |[_____________][___]|
+                  </br>
+                  |[_____________][___]|
+                  </br>
+                  +---------------------------+
+                  </br>
+                  </br>
+                  Small size:
+                  </br>
+                  +---------------+
+                  </br>
+                  |[________][]|
+                  </br>
+                  |texttextte[]|
+                  </br>
+                  |texttextte[]|
+                  </br>
+                  |footerfoot[]|
+                  </br>
+                  +---------------+
+                  </br>
+                  
+                  I hope that comes out right...
+                </p>
+              </div>
+            </article>
+          </section>
+          
           <script src="js/slider.js"></script>
 	  <script src="js/sectionResize.js"></script>
           <script>
             var m = new Slider ();
-            var left   = document.getElementsByClassName ('left')[0];
-            var right  = document.getElementsByClassName ('right')[0];
-            var center = document.getElementsByClassName ('center')[0];
             
             setInterval (function () {
-              left   = document.getElementsByClassName ('left')[0];
-              right  = document.getElementsByClassName ('right')[0];
-              center = document.getElementsByClassName ('center')[0];
-              
-              left.onclick = function () {
+              document.getElementsByClassName ('left')[0].onclick = function () {
                 m.left ();
-                left.onclick = function () {}
-                left   = document.getElementsByClassName ('left')[0];
-                right  = document.getElementsByClassName ('right')[0];
-                center = document.getElementsByClassName ('center')[0];
               }
-              right.onclick = function () {
+              document.getElementsByClassName ('right')[0].onclick = function () {
                 m.right ();
-                right.onclick = function () {}
-                left   = document.getElementsByClassName ('left')[0];
-                right  = document.getElementsByClassName ('right')[0];
-                center = document.getElementsByClassName ('center')[0];
               }
-              center.onclick = function () {
+              document.getElementsByClassName ('center')[0].onclick = function () {
                 m.right ();
-                center.onclick = function () {}
-                left   = document.getElementsByClassName ('left')[0];
-                right  = document.getElementsByClassName ('right')[0];
-                center = document.getElementsByClassName ('center')[0];
               }
             }, 100);
           </script>
