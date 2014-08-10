@@ -1,3 +1,7 @@
+@font-face{
+  font-family: DFI;
+  src: url(../font/DFI.ttf);
+}
 header {
   padding: 0px;
   height: 2em;
@@ -11,6 +15,7 @@ header h1 {
   padding-left: .5em;
   padding-right: .5em;
   font-weight: normal;
+  font-family:DFI;
 }
 
 header nav {
