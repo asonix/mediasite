@@ -24,6 +24,7 @@ def locate (pattern, root=os.curdir):
 
 
 os.system ('sudo cp -r * /home/riley/site/')
+os.system ('sudo chmod 755 -R /home/riley/site/*')
 
 os.chdir ('/home/riley/site')
 
