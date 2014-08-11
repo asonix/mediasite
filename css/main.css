@@ -45,23 +45,27 @@ header h1 {
 }
 
 header nav {
-  text-align: center;
+  text-align: left;
 }
 
 header nav ul {
+  position:fixed;
+  top:0px;
   text-decoration: none;
   list-style: none;
   padding: 0px;
   margin: 0px;
+  max-height:2em;
+  overflow-y:hidden;
 }
 
 header nav ul a {
+  display: inline-block;
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 0.625em;
 }
 
 header nav ul a li {
-  display: inline-block;
   vertical-align: middle;
 }
 
