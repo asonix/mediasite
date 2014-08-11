@@ -6,9 +6,10 @@ function sectionResize () {
     
     var availableHeight = window.innerHeight - header.clientHeight - footer.clientHeight;
     
-    var proposedHeight = section.clientWidth * .45;
+    var proposedHeight = window.innerWidth * .45;
     var proposedWidth = availableHeight / .45;
     
+    console.log (proposedHeight, availableHeight);
     if (proposedHeight > availableHeight) {
         section.style.height = availableHeight + 'px';
         section.style.width  = availableHeight / .45 + 'px';

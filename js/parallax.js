@@ -2,7 +2,7 @@ function parallax (elements) {
 
   function isScrolledIntoView (elem) {
     
-    var docViewTop = document.body.scrollTop;
+    var docViewTop = document.body.scrollTop || document.documentElement.scrollTop;
     var docViewBottom = docViewTop + window.innerHeight;
     
     var elemTop = getPosY (elem);
@@ -15,10 +15,12 @@ function parallax (elements) {
   
   for (var i = 0; i < elements.length; i++) {
     if (isScrolledIntoView (elements[i]) == true) {
-      var position = /*getPosY (elements[i]) -*/ drama*document.body.scrollTop/window.innerHeight;
+      var scrolltop = document.body.scrollTop || document.documentElement.scrollTop;
+      var position = /*getPosY (elements[i]) -*/ drama*scrolltop/window.innerHeight;
       var final = position;
       
-      elements[i].style.backgroundPosition = /*getPosX (elements[i]) +*/ '0px ' + final + 'px';
+      console.log (document.scrollTop);
+      elements[i].style.backgroundPosition = '0px ' + final + 'px';
     }
   }
 }
