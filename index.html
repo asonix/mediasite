@@ -44,23 +44,23 @@
         <div class="positioning full">
           <section>
             <article class="slide off">
-              <div class="inslide">
-                <img src="img/promos/tupromo.png" alt="cyberpunk">
+              <div class="inslide" style="background-image: url('img/promos/tupromo.png');">
+                <!--<img src="img/promos/tupromo.png" alt="cyberpunk">-->
               </div>
             </article>
             <article class="slide off">
-              <div class="inslide">
-                <img src="img/promos/blacksquaresPromo.png" alt="netlabel">
+              <div class="inslide" style="background-image: url('img/promos/blacksquaresPromo.png');">
+                <!--<img src="img/promos/blacksquaresPromo.png" alt="netlabel">-->
               </div>
             </article>
             <article class="slide off">
-              <div class="inslide">
-                <img src="img/promos/githubPromo.png" alt="open source">
+              <div class="inslide" style="background-image: url('img/promos/githubPromo.png');">
+                <!--<img src="img/promos/githubPromo.png" alt="open source">-->
               </div>
             </article>
             <article class="slide off">
-              <div class="inslide">
-                <img src="img/promos/dinoPlaceholder.png" alt="temporary">
+              <div class="inslide" style="background-image: url('img/promos/dinoPlaceholder.png');">
+                <!--<img src="img/promos/dinoPlaceholder.png" alt="temporary">-->
               </div>
             </article>
           </section>
@@ -156,24 +156,6 @@
               </div>
             </article>
           </section>
-          
-          <script src="js/slider.js"></script>
-	  <script src="js/sectionResize.js"></script>
-          <script>
-            var m = new Slider ();
-            
-            setInterval (function () {
-              document.getElementsByClassName ('left')[0].onclick = function () {
-                m.left ();
-              }
-              document.getElementsByClassName ('right')[0].onclick = function () {
-                m.right ();
-              }
-              document.getElementsByClassName ('center')[0].onclick = function () {
-                m.right ();
-              }
-            }, 100);
-          </script>
         </div>
         
         <footer>
@@ -181,5 +163,41 @@
         </footer>
       </div>
     </div>
+    
+    <script src="js/slider.js"></script>
+    <script src="js/sectionResize.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/getpos.js"></script>
+    <script>
+      var m = new Slider ();
+      var inslide = document.getElementsByClassName ('inslide');
+      m.custom = function () {
+        //execute custom function on slide change
+      }
+      
+      setInterval (function () {
+        document.getElementsByClassName ('left')[0].onclick = function () {
+          m.left ();
+        }
+        document.getElementsByClassName ('right')[0].onclick = function () {
+          m.right ();
+        }
+        document.getElementsByClassName ('center')[0].onclick = function () {
+          m.right ();
+        }
+      }, 100);
+      
+      parallax (inslide);
+      sectionResize ();
+      
+      window.onscroll = function () {
+        parallax (inslide);
+        //sectionResize ();
+      };
+      window.onresize = function(){
+        parallax (inslide);
+        sectionResize ();
+      };
+    </script>
   </body>
 </html>

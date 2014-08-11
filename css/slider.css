@@ -32,4 +32,6 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
+  background-size: 100%;
+  /*background-attachment: fixed;*/
 }

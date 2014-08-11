@@ -3,6 +3,10 @@
   src: url(../font/DFI.ttf);
 }
 header {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
   font-size: 30px;
   padding: 0px;
   height: 2em;
@@ -30,10 +34,15 @@ header nav ul a {
   padding-right: .7em;
 }
 
+header nav ul a li {
+  margin-top: -3px;
+}
+
 .full {
   position: relative;
   padding: 0px;
   margin: 0px;
+  margin-top: 3.8em;
   margin-bottom: 2em;
   width: 100%;
   max-width: 100%;
@@ -46,8 +55,10 @@ section:nth-child(1) {
   padding: 0px;
   overflow:hidden;
   width: 100%;
-  max-width:100%;
+  max-width:111%;
   max-height:100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inslide img {
