@@ -11,7 +11,7 @@ function parallax (elements) {
     return (((elemBottom >= docViewTop) || (elemTop >= docViewTop)) && (elemTop <= docViewBottom));
   }
   
-  var drama = elements[0].clientHeight / 5;
+  var drama = elements[0].clientHeight / 1;
   
   for (var i = 0; i < elements.length; i++) {
     if (isScrolledIntoView (elements[i]) == true) {
