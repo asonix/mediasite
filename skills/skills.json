@@ -6,7 +6,7 @@
       "skills"    : [
         { "art" : "digital" },
         { "art" : "traditional" },
-        { "art" : "animation" }
+        { "film" : "animation" }
       ],
         "bio" : "This is a long string.",
         "url" : "../artists/syrico"
@@ -15,7 +15,7 @@
       "name"      : "Ce Test One",
       "username"  : "CeTest1",
       "skills"    : [
-        { "art"   : "animation" },
+        { "film"   : "animation" },
         { "music" : "production" },
         { "art"   : "traditional" }
       ],
@@ -69,7 +69,7 @@
       "skills"    : [
         { "art" : "digital" },
         { "art"         : "traditional" },
-        { "art"         : "animation" },
+        { "film"         : "animation" },
         { "programming" : "c++" },
         { "programming" : "vala" }
       ],
@@ -82,7 +82,7 @@
       "skills"    : [
         { "art" : "digital" },
         { "art" : "traditional" },
-        { "art" : "animation" }
+        { "film" : "animation" }
       ],
         "bio" : "This is a long string.",
         "url" : "../artists/syrico"

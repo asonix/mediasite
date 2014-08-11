@@ -7,17 +7,17 @@ body {
 }
 
 .home {
-  background-color: #0f0f0f;
+  background-color: #23232b;
 }
 
 header {
-  background-color: #0f0f0f;
+  background-color: #23211E;
   color: #c939de;
-  box-shadow: inset 0px -1px 7px #000000;
+  box-shadow: 0px 1px 7px #000000;
 }
 
 .home header h1 {
-  border-right: 1px solid #c939de;
+  /*border-right: 1px solid #c939de;*/
 }
 
 header nav ul a {
@@ -34,12 +34,12 @@ header nav ul a:visited { color: #c939de; }
 header nav ul a:visited:hover { color: #09035f; }
 
 .full section:nth-child(1) {
-  border-bottom: 1px solid #c939de;
-  border-top: 1px solid #c939de;
+  /*border-bottom: 1px solid #c939de;*/
+  /*border-top: 1px solid #c939de;*/
   box-shadow: 0px 2px 10px #000000;
 }
 section {
-  background-color: #0f0f0f;
+  background-color: #272822;
   box-shadow: inset 0px 0px 10px #000000;
   -webkit-transition: background-color .3s, box-shadow .3s;
   transition: background-color .3s, box-shadow .3s;
@@ -47,11 +47,13 @@ section {
 
 .full section { box-shadow: 0px 0px 0px; }
 .home .full section:nth-child(2) {
-  box-shadow: inset 0px 2px 10px #000000;
+  background-color: #23232b;
+  /*box-shadow: inset 0px 2px 10px #000000;*/
+  box-shadow: 0px -1px 7px #000000;
 }
 
 .home .full section:nth-child(2) article {
-  /*background-color: #23232b;*/
+  box-shadow: 0px 0px 0px;
 }
 
 article a h1 {
@@ -60,6 +62,12 @@ article a h1 {
   background-size: 1360px;
   box-shadow: 0px 0px 5px #000000;
   color: #c939de;
+}
+
+article .box {
+  background-color: #584C60;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #000000;
 }
 
 .skills .column {
@@ -100,12 +108,12 @@ article a h1 {
 }
 
 footer {
-  background-color: #0f0f0f;
-  box-shadow: inset 0px 0px 5px #000000;
+  background-color: #23211E;
+  box-shadow: 0px -1px 7px #000000;
 }
 
 .home .wrapper footer {
-  border-top: 1px solid #c939de;
+  /*border-top: 1px solid #c939de;*/
   box-shadow: 0px -2px 10px #000000;
 }
 
@@ -136,11 +144,13 @@ footer {
 @media (max-width: 1000px) {
   .home,
   section {
-    background-color: #23232b;
     box-shadow: 0px 0px 0px;
   }
+  section {
+    background-color: transparent;
+  }
   .full section:nth-child(1) {
-    background-color: #0f0f0f;
+    background-color: #272822;
   }
   article a h1 {
     box-shadow: inset 0px 0px 5px #000000;

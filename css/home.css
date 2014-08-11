@@ -3,6 +3,7 @@
   src: url(../font/DFI.ttf);
 }
 header {
+  font-size: 30px;
   padding: 0px;
   height: 2em;
   line-height: 2em;
@@ -25,9 +26,8 @@ header nav {
 header nav ul a {
   display: inline-block;
   padding: 0px;
-  padding-left: .5em;
-  padding-right: .5em;
-  line-height: 2em;
+  padding-left: .7em;
+  padding-right: .7em;
 }
 
 .full {
@@ -57,6 +57,7 @@ section:nth-child(1) {
 section:nth-child(2) {
   position: relative;
   padding: 0px;
+  z-index: 2;
   
 }
 
@@ -74,7 +75,7 @@ section:nth-child(2) article:nth-child(2) {
 
 .box {
   margin-top: 5px;
-  border: dashed 1px #ffffff;
+  padding: .5em 1em;
 }
 
 section:nth-child(2) article p:nth-child(1) {

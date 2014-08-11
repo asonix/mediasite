@@ -21,15 +21,15 @@ body {
 }
 
 .content {
-    position: absolute;
-    min-height: 100%;
-    width: 100%;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
 }
 
 header {
   position: relative;
   padding: 10px;
-  z-index: 2;
+  z-index: 4;
 }
 
 header h1 {
@@ -37,6 +37,11 @@ header h1 {
   margin: 0px auto;
   padding: .25em 0px;
   font-size: 4em;
+}
+
+.home header h1 .topbaricon {
+  margin-right: .3em;
+  margin-top: .1em;
 }
 
 header nav {
@@ -57,6 +62,14 @@ header nav ul a {
 
 header nav ul a li {
   display: inline-block;
+  vertical-align: middle;
+}
+
+.topbaricon{
+  position:relative;
+  height: .7em;
+  width: .7em;
+  /*top:2px;*/
 }
 
 .positioning {
@@ -100,10 +113,4 @@ footer {
     padding: 0em 0em 2em;
     width: 100%;
   }
-}
-.topbaricon{
-  position:relative;
-  height:16px;
-  width:16px;
-  top:2px;
 }
