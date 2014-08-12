@@ -57,7 +57,7 @@ header nav ul {
   padding: 0px;
   margin: 0px;
   max-height:2em;
-  overflow-y:hidden;
+  #overflow-y:hidden;      // This is gonna break for a bit.
 }
 
 header nav ul a {
@@ -69,6 +69,24 @@ header nav ul a {
 header nav ul a li {
   vertical-align: middle;
 }
+
+header nav li ul {
+  margin:0px;
+  display:none;;
+  position:absolute;
+  top:2em;
+  left:0px;
+  height:60px;
+  background-color:#FF0000;
+  z-index:5;
+  width:100%;
+}
+header nav li:hover ul{
+  display:inline-block;
+  position:absolute;
+}
+
+
 
 .topbaricon{
   position:relative;
