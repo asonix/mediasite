@@ -1,0 +1,190 @@
+/*          COLOUR LIST           
+white: F4F2F5
+black: 292829
+grey: 736675
+purple: #E68BFS
+purple-hover: #866EC2
+
+
+
+
+
+*/
+
+html,
+body {
+  background-color: #292829;
+  color: #292829;
+  -webkit-transition: background-color .3s;
+          transition: background-color .3s;
+}
+
+.home {
+  background-color: #292829;
+}
+
+header {
+  background-color: #292829;
+  color: #F2D6F7;
+  box-shadow: inset 0px -1px 7px rgba(41, 41, 41, 0.3);
+}
+
+.home header h1 {
+  border-right: 1px solid #292829;
+  background-color: #292829;
+}
+
+header {
+  background-color: #292829;
+  color: #c939de;
+  box-shadow: 0px 1px 7px rgba(41, 41, 41, 0.3);
+}
+
+header nav ul a {
+  color: #c939de;
+  -webkit-transition: background-color .3s, color .3s;
+          transition: background-color .3s, color .3s;
+}
+header nav ul a:hover {
+  background-color: #995dde;
+  color: #09035f;
+}
+header nav ul a:visited { color: #c939de; }
+header nav ul a:visited:hover { color: #09035f; }
+
+.full section:nth-child(1) {
+  border-bottom: 1px solid #292829;
+  border-top: 1px solid #292829;
+  box-shadow: 0px 2px 10px rgba(41, 41, 41, 0.3);
+}
+section {
+  background-color: #F4F2F5;
+  /*box-shadow: inset 0px 0px 10px #000000;*/
+  /*border-bottom: 1px solid #c939de;*/
+  /*border-top: 1px solid #c939de;*/
+  box-shadow: 0px 2px 10px rgba(41, 41, 41, 0.3);
+}
+section {
+  background-color: #292829;
+  box-shadow: inset 0px 0px 10px rgba(41, 41, 41, 0.3);
+  -webkit-transition: background-color .3s, box-shadow .3s;
+          transition: background-color .3s, box-shadow .3s;
+}
+
+.full section { box-shadow: none; }
+.home .full section:nth-child(2) {
+/*  box-shadow: inset 0px 2px 10px rgba(41, 41, 41, 0.3);*/
+}
+
+.home .full section:nth-child(2) article {
+  background-color: #292829;
+  box-shadow: inset 0px 2px 10px rgba(41, 41, 41, 0.3);
+  box-shadow: 0px -1px 7px rgba(41, 41, 41, 0.3);
+}
+
+.home .full section:nth-child(2) article {
+  box-shadow: none;
+}
+
+article a h1 {
+  background-color: #292829;
+  background-image: url('../img/names.png');
+  background-size: 1360px;
+  box-shadow: 0px 0px 5px rgba(41, 41, 41, 0.3);
+  color: #c939de;
+}
+
+article .box {
+  background-color: #F4F2F5;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(41, 41, 41, 0.3);
+}
+
+.skills .column {
+  background-color: #F4F2F5;
+  color: #292829;
+  box-shadow: 0px 0px 10px rgba(41, 41, 41, 0.3);
+}
+
+.skills .column .title {
+  background-color: #E7E5E8;
+  color: #292829;
+}
+
+.skills .column .item {
+  background-color: #dedede;
+  -webkit-transition: background-color .3s;
+          transition: background-color .3s;
+}
+.skills .column .item:hover {
+  background-color: #B6C0EF;
+}
+.skills .column .selected {
+  background-color: #ffffff;
+}
+.square {
+  background-color: #9e9da6;
+}
+.square .album .cover {
+  box-shadow: 0px 0px 5px #000000;
+}
+.square .album .cover .overlay {
+  background-color: #202020;
+  color: #e5e5e5;
+}
+
+footer {
+  background-color: #292829;
+  color: #393839;
+/*  box-shadow: inset 0px 0px 5px rgba(41, 41, 41, 0.3);*/
+}
+
+.home .wrapper footer {
+/*  border-top: 1px solid #c939de;*/
+/*  box-shadow: 0px -2px 10px rgba(41, 41, 41, 0.3);*/
+  background-color: #292829;
+/*  box-shadow: 0px -1px 7px rgba(41, 41, 41, 0.3);*/
+}
+
+.sidebar {
+  background-color: #292829;
+  color: #d4d4d4;
+  box-shadow: 0px 0px 5px rgba(41, 41, 41, 0.3);
+}
+.sidebar a {
+  text-decoration: none;
+  color: #d4d4d4;
+}
+.sidebar a:hover {
+  color: #09035f;
+}
+.sidebar a .link {
+  -webkit-transition: background-color .3s, color .3s;
+          transition: background-color .3s, color .3s;
+}
+.sidebar a .link:hover {
+  background-color: #995dde;
+  color: #09035f;
+}
+
+@media (max-width: 1000px) {
+  .home,
+  section {
+    box-shadow: none;
+  }
+  section {
+    background-color: transparent;
+  }
+  .full section:nth-child(1) {
+    background-color: #292829;
+  }
+  article a h1 {
+    box-shadow: inset 0px 0px 5px rgba(41, 41, 41, 0.3);;
+  }
+  .square {
+    box-shadow: none;
+  }
+  .square .album .cover {
+    box-shadow: inset 0px 0px 3px rgba(41, 41, 41, 0.3);;
+  }
+}
