@@ -1,15 +1,26 @@
+@font-face {
+  font-family: Satellite;
+  font-weight: normal;
+  src: url("../font/Satellite.otf") format("opentype");
+}
+
 html,
 body {
   background-color: #3b2913;
   color: #3b2913;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
+  font-family: Satellite;
 }
 
 header {
   background-color: #b1e0cd;
   color: #3b2913;
   box-shadow: 0px 1px 5px #000000;
+}
+
+header h1 {
+  /*font-family: Satellite;*/
 }
 
 header nav ul a {
@@ -32,6 +43,11 @@ section {
   transition: background-color .3s, box-shadow .3s;
 }
 
+.home .full section:nth-child(2) {
+  background-color: transparent;
+  box-shadow: 0px -1px 7px #000000;
+}
+
 .full section { box-shadow: 0px 0px 0px; }
 
 article a h1 {
@@ -40,6 +56,43 @@ article a h1 {
   background-size: 1360px;
   box-shadow: inset 0px 0px 10px #000000;
   color: #efb3db;
+}
+
+article .box {
+  background-color: #F9DEF8;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+.skills {
+  font-family: Satellite;
+  color: #DBBAF2;
+}
+
+.skills .column {
+  background-color: #A178BF;
+  color: #0f0f0f;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+.skills .column .title {
+  font-family: Satellite;
+  background-color: #F9B3F6;
+  color: #0F0F0F;
+}
+
+.skills .column .item {
+  font-family: Satellite;
+  background-color: #DBBAF2;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+.skills .column .item:hover {
+  background-color: #C9ECFC;
+}
+
+.skills .column .selected {
+  background-color: #F3E2FF;
 }
 
 .square {
@@ -86,9 +139,9 @@ footer {
 }
 
 @media (max-width: 1000px) {
-  html, body { background-color: #897966; }
+  /*html, body { background-color: #897966; }*/
   section {
-    /*background-color: transparent;*/
+    background-color: transparent;
     box-shadow: 0px 0px 0px;
   }
   .square {

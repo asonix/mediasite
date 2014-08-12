@@ -3,6 +3,11 @@
   src: url(../font/DFI.ttf);
 }
 header {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  font-size: 30px;
   padding: 0px;
   height: 2em;
   line-height: 2em;
@@ -25,15 +30,19 @@ header nav {
 header nav ul a {
   display: inline-block;
   padding: 0px;
-  padding-left: .5em;
-  padding-right: .5em;
-  line-height: 2em;
+  padding-left: .7em;
+  padding-right: .7em;
+}
+
+header nav ul a li {
+  margin-top: -3px;
 }
 
 .full {
   position: relative;
   padding: 0px;
   margin: 0px;
+  margin-top: 3.8em;
   margin-bottom: 2em;
   width: 100%;
   max-width: 100%;
@@ -46,8 +55,10 @@ section:nth-child(1) {
   padding: 0px;
   overflow:hidden;
   width: 100%;
-  max-width:100%;
+  max-width:111%;
   max-height:100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inslide img {
@@ -57,7 +68,7 @@ section:nth-child(1) {
 section:nth-child(2) {
   position: relative;
   padding: 0px;
-  
+  z-index: 2;
 }
 
 section:nth-child(2) article {
@@ -73,8 +84,8 @@ section:nth-child(2) article:nth-child(2) {
 }
 
 .box {
-  margin-top: 5px;
-  border: dashed 1px #ffffff;
+  margin-top: 3em;
+  padding: .5em 1em;
 }
 
 section:nth-child(2) article p:nth-child(1) {

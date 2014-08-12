@@ -21,15 +21,15 @@ body {
 }
 
 .content {
-    position: absolute;
-    min-height: 100%;
-    width: 100%;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
 }
 
 header {
   position: relative;
   padding: 10px;
-  z-index: 2;
+  z-index: 4;
 }
 
 header h1 {
@@ -39,24 +39,41 @@ header h1 {
   font-size: 4em;
 }
 
+.home header h1 .topbaricon {
+  margin-right: .3em;
+  margin-top: .1em;
+}
+
 header nav {
-  text-align: center;
+  text-align: left;
 }
 
 header nav ul {
+  position:absolute;
+  top:0px;
   text-decoration: none;
   list-style: none;
   padding: 0px;
   margin: 0px;
+  max-height:2em;
+  overflow-y:hidden;
 }
 
 header nav ul a {
+  display: inline-block;
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 0.625em;
 }
 
 header nav ul a li {
-  display: inline-block;
+  vertical-align: middle;
+}
+
+.topbaricon{
+  position:relative;
+  height: .7em;
+  width: .7em;
+  /*top:2px;*/
 }
 
 .positioning {
@@ -100,10 +117,4 @@ footer {
     padding: 0em 0em 2em;
     width: 100%;
   }
-}
-.topbaricon{
-  position:relative;
-  height:16px;
-  width:16px;
-  top:2px;
 }

@@ -8,6 +8,7 @@ function Slider () {
   }
   
   this.slider;
+  this.custom = function () {};
   var sl = this;
   var i = [-1, 0, 1, -3, -2];
   var slides;
@@ -50,6 +51,8 @@ function Slider () {
     slides[i[2]].className = "slide offtwo";
     slides[i[3]].className = "slide offone";
     slides[i[4]].className = "slide left";
+    
+    sl.custom();
   }
   
   this.start = function () {

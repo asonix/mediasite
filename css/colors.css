@@ -19,6 +19,7 @@ body {
 }
 
 .home {
+<<<<<<< HEAD
   background-color: #F4F2F5;
 }
 
@@ -30,6 +31,19 @@ header {
 
 .home header h1 {
   border-right: 1px solid #414141;
+=======
+  background-color: #23232b;
+}
+
+header {
+  background-color: #23211E;
+  color: #c939de;
+  box-shadow: 0px 1px 7px #000000;
+}
+
+.home header h1 {
+  /*border-right: 1px solid #c939de;*/
+>>>>>>> FETCH_HEAD
 }
 
 header nav ul a {
@@ -45,6 +59,7 @@ header nav ul a:visited { color: #c939de; }
 header nav ul a:visited:hover { color: #09035f; }
 
 .full section:nth-child(1) {
+<<<<<<< HEAD
   border-bottom: 1px solid #292829;
   border-top: 1px solid #292829;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
@@ -52,17 +67,36 @@ header nav ul a:visited:hover { color: #09035f; }
 section {
   background-color: #F4F2F5;
 /*  box-shadow: inset 0px 0px 10px #000000;*/
+=======
+  /*border-bottom: 1px solid #c939de;*/
+  /*border-top: 1px solid #c939de;*/
+  box-shadow: 0px 2px 10px #000000;
+}
+section {
+  background-color: #272822;
+  box-shadow: inset 0px 0px 10px #000000;
+>>>>>>> FETCH_HEAD
   -webkit-transition: background-color .3s, box-shadow .3s;
           transition: background-color .3s, box-shadow .3s;
 }
 
 .full section { box-shadow: 0px 0px 0px; }
 .home .full section:nth-child(2) {
+<<<<<<< HEAD
   box-shadow: inset 0px 2px 10px rgba(41, 41, 41, 0.3);
 }
 
 .home .full section:nth-child(2) article {
   `background-color: #23232b;
+=======
+  background-color: #23232b;
+  /*box-shadow: inset 0px 2px 10px #000000;*/
+  box-shadow: 0px -1px 7px #000000;
+}
+
+.home .full section:nth-child(2) article {
+  box-shadow: 0px 0px 0px;
+>>>>>>> FETCH_HEAD
 }
 
 article a h1 {
@@ -71,6 +105,12 @@ article a h1 {
   background-size: 1360px;
   box-shadow: 0px 0px 5px rgba(41, 41, 41, 0.3);
   color: #c939de;
+}
+
+article .box {
+  background-color: #584C60;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #000000;
 }
 
 .skills .column {
@@ -107,6 +147,7 @@ article a h1 {
 }
 
 footer {
+<<<<<<< HEAD
   background-color: #292829;
   color: #575657;
   box-shadow: inset 0px 0px 5px rgba(41, 41, 41, 0.3);
@@ -115,6 +156,15 @@ footer {
 .home .wrapper footer {
 /*  border-top: 1px solid #c939de;*/
   box-shadow: 0px -2px 10px rgba(41, 41, 41, 0.3);
+=======
+  background-color: #23211E;
+  box-shadow: 0px -1px 7px #000000;
+}
+
+.home .wrapper footer {
+  /*border-top: 1px solid #c939de;*/
+  box-shadow: 0px -2px 10px #000000;
+>>>>>>> FETCH_HEAD
 }
 
 .sidebar {
@@ -141,7 +191,17 @@ footer {
 @media (max-width: 1000px) {
   .home,
   section {
+<<<<<<< HEAD
     box-shadow: none;
+=======
+    box-shadow: 0px 0px 0px;
+  }
+  section {
+    background-color: transparent;
+  }
+  .full section:nth-child(1) {
+    background-color: #272822;
+>>>>>>> FETCH_HEAD
   }
   article a h1 {
     box-shadow: inset 0px 0px 5px #000000;
