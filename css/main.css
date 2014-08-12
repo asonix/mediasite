@@ -21,22 +21,22 @@ body {
 }
 
 .content {
-  position: absolute;
+  position:absolute;
   min-height: 100%;
   width: 100%;
 }
 
 header {
-  position: relative;
   padding: 10px;
   z-index: 4;
 }
 
 header h1 {
-  text-align: center;
-  margin: 0px auto;
-  padding: .25em 0px;
+  margin: 0px;
+  padding: 0.25em 0px;
   font-size: 4em;
+  display:block;
+  float:left;
 }
 
 .home header h1 .topbaricon {
@@ -45,12 +45,13 @@ header h1 {
 }
 
 header nav {
-  text-align: left;
+  text-align: right;
+  position:absolute;
+  top:0px;
+  display:block;
 }
 
 header nav ul {
-  position:absolute;
-  top:0px;
   text-decoration: none;
   list-style: none;
   padding: 0px;
