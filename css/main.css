@@ -30,11 +30,9 @@ header {
   padding: 10px;
   z-index: 4;
 }
-
-header h1 {
-  margin: 0px;
-  padding: 0.25em 0px;
-  font-size: 4em;
+h1{
+  margin:0px;
+  padding:0.25em 0px;
   display:block;
   float:left;
 }
@@ -45,92 +43,74 @@ header h1 {
 }
 
 header nav {
+  display:inline-block;
   text-align: left;
   position:absolute;
-  top:0px;
-  display:block;
+  top:3px;
+  width:100%;
 }
 
 header nav ul {
   text-decoration: none;
+  display:inline;
   list-style: none;
   padding: 0px;
   margin: 0px;
   max-height:2em;
   #overflow-y:hidden;      // This is gonna break for a bit.
+  whitespace: nowrap;
+}
+.topBarGroupButton{
+  max-height:1.9em;
+}
+.topBarGroupButton img{
+  position:relative;
+  bottom:3px;
 }
 
 header nav ul a {
-  display: inline-block;
   text-decoration: none;
   padding: 0.625em;
+  float:left;
 }
 
 header nav ul a li {
   vertical-align: middle;
-  display:inline;
 }
 
-.quickfix{
-  display:inline;
+header nav li ul{display:none;}
+header nav li:hover ul
+{
+ display:inherit;
+ list-style-type:none;
+ position:fixed;
+ top:2em; left:0;
+ min-height:3.7em;
+ width:100%;
+ background-color:#D033F0;
 }
-
-header nav li div{
-  display:inline;
-  clear:both;
-}
-
-header nav li ul{
-  width:0px;
-  height:0px;
-  overflow:hidden;
-}
-
-header nav li:hover ul{
-  left:0px;
-  top:2em;
-  height:100%;
-  position:fixed;
-  visibility:hidden;
-  text-align:left;
-  list-style-type:none;
-  padding-bottom:1.6em;
-  background-color:#DD00FF;
-  width:100%;
-}
-header nav li:hover ul li{
-  display:inline;
-  float:left;
-}
-header nav li:hover ul a{
-  display: inline-block;
-  color:#333333;
-  font-size:0.4em;
-  position:relative;
-  top:0px;
-  padding-top:0.3em;
-  text-align:center;
+header nav li:hover ul a li{
+ color:#333333;
+ font-size:.5em;
+ text-align:center;
+ vertical-align:top;
+ margin:0px;
 }
 header nav li:hover ul img{
-  margin:0px;
-  padding:0.3em 0 0 0;
-  vertical-align:top;
+ position:relative;
+ top:0.3em;
+ height:3.5em;
+ width:3.5em;
+ display:block;
+ margin-left:auto;
+ margin-right:auto;
 }
+
 
 .topbaricon{
   position:relative;
   height: .7em;
   width: .7em;
-  /*top:2px;*/
-}
-
-header:after{
- content:".";
- clear:both;
- visibility:hidden;
- line-height:0;
- height:0;
- display:block;
 }
 
 .positioning {
