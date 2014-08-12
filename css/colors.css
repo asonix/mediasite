@@ -1,5 +1,6 @@
 /*          COLOUR LIST           
 white: F4F2F5
+black: 292829
 grey: 736675
 purple: #E68BFS
 purple-hover: #866EC2
@@ -101,7 +102,7 @@ article .box {
 
 .skills .column {
   background-color: #F4F2F5;
-  color: #0f0f0f;
+  color: #292829;
   box-shadow: 0px 0px 10px rgba(41, 41, 41, 0.3);
 }
 
@@ -170,7 +171,6 @@ footer {
   .home,
   section {
     box-shadow: none;
-    box-shadow: 0px 0px 0px;
   }
   section {
     background-color: transparent;
