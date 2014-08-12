@@ -66,6 +66,10 @@ header nav ul a {
   padding: 0.625em;
 }
 
+.quickfix{
+  float:left;
+}
+
 header nav ul a li {
   vertical-align: middle;
 }
