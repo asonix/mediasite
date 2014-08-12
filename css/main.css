@@ -103,13 +103,20 @@ header nav li:hover ul img{
   vertical-align:top;
 }
 
-
-
 .topbaricon{
   position:relative;
   height: .7em;
   width: .7em;
   /*top:2px;*/
+}
+
+header:after{
+ content:".";
+ clear:both;
+ visibility:hidden;
+ line-height:0;
+ height:0;
+ display:block;
 }
 
 .positioning {
