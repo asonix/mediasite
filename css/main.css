@@ -66,31 +66,40 @@ header nav ul a {
   padding: 0.625em;
 }
 
-.quickfix{
-  float:left;
-}
-
 header nav ul a li {
   vertical-align: middle;
+  display:inline;
+}
+
+.quickfix{
+  display:inline;
+}
+
+header nav li div{
+  display:inline;
+  clear:both;
 }
 
 header nav li ul{
-  display:none;
-  position:fixed;
-  top:2em;
+  width:0px;
+  height:0px;
+  overflow:hidden;
+}
+
+header nav li:hover ul{
   left:0px;
+  top:2em;
   height:100%;
+  position:fixed;
+  visibility:hidden;
+  text-align:left;
+  list-style-type:none;
   padding-bottom:1.6em;
   background-color:#DD00FF;
   width:100%;
 }
-header nav li:hover ul{
-  display:initial;
-  position:fixed;
-  text-align:left;
-}
 header nav li:hover ul li{
-  display:inline-block;
+  display:inline;
   float:left;
 }
 header nav li:hover ul a{
