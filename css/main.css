@@ -45,7 +45,7 @@ header h1 {
 }
 
 header nav {
-  text-align: right;
+  text-align: left;
   position:absolute;
   top:0px;
   display:block;
@@ -91,6 +91,7 @@ header nav li:hover ul{
 }
 header nav li:hover ul li{
   display:inline-block;
+  float:left;
 }
 header nav li:hover ul a{
   display: inline-block;
