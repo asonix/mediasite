@@ -70,20 +70,37 @@ header nav ul a li {
   vertical-align: middle;
 }
 
-header nav li ul {
-  margin:0px;
-  display:none;;
-  position:absolute;
+header nav li ul{
+  display:none;
+  position:fixed;
   top:2em;
   left:0px;
-  height:60px;
-  background-color:#FF0000;
-  z-index:5;
+  height:100%;
+  padding-bottom:1.6em;
+  background-color:#DD00FF;
   width:100%;
 }
 header nav li:hover ul{
+  display:initial;
+  position:fixed;
+  text-align:left;
+}
+header nav li:hover ul li{
   display:inline-block;
-  position:absolute;
+}
+header nav li:hover ul a{
+  display: inline-block;
+  color:#333333;
+  font-size:0.4em;
+  position:relative;
+  top:0px;
+  padding-top:0.3em;
+  text-align:center;
+}
+header nav li:hover ul img{
+  margin:0px;
+  padding:0.3em 0 0 0;
+  vertical-align:top;
 }
 
 
