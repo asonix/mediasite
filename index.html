@@ -9,6 +9,29 @@
     <link href="css/home.css" rel="stylesheet" type="text/css">
     <link href="css/slider.css" rel="stylesheet" type="text/css">
     <link href="css/colors.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .artists {
+            display: none;
+        }
+        .artistsShown {
+            display: block;
+            background-color: #282828;
+            max-height: none;
+            text-align: center;
+            width: auto;
+        }
+        .artistsShown li {
+            position: relative;
+        }
+        .artistsShown li img {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            margin: auto;
+        }
+    </style>
   </head>
 
   <body class="home">
@@ -24,13 +47,8 @@
               <img src="img/icons/works.png" class="topbaricon"/>
               </li></a><a href="groups/index.html"><li>
               <img src="img/icons/groups.png" class="topbaricon"/>
-              </li></a><a href="artists/index.html"><li class="quickfix">
+              </li></a><a class="artlink" href="artists/index.html"><li>
               <img src="img/icons/artists.png" class="topbaricon"/>
-               <ul>
-		<a href="people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/><br/>Circuitfry</li></a>
-		<a href="people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/><br/>Circuitfry</li></a>
-		<a href="people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/><br/>Circuitfry</li></a>
-	       </ul> 
               </li></a><a href="producers/index.html"><li>
               <img src="img/icons/producers.png" class="topbaricon"/> 
               </li></a><a href="djs/index.html"><li>
@@ -43,6 +61,43 @@
               <img src="img/icons/webdevelopers.png" class="topbaricon"/> 
               </li></a>
             </ul>
+            <ul class="artists">
+              <a href="people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/><br/>Circuitfry</li></a>
+              <a href="people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/><br/>Circuitfry</li></a>
+              <a href="people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/><br/>Circuitfry</li></a>
+	        </ul> 
+            <script>
+                function artistPanel () {
+                    var artlink = document.getElementsByClassName ('artlink')[0];
+                    artlink.mouseIsOver = false;
+                    artlink.onmouseover = function () {
+                        this.mouseIsOver = true;
+                    };
+                    artlink.onmouseout = function () {
+                        this.mouseIsOver = false;
+                    };
+
+                    var panel = document.getElementsByClassName ('artists')[0];
+                    panel.mouseIsOver = false;
+                    panel.onmouseover = function () {
+                        this.mouseIsOver = true;
+                    };
+                    panel.onmouseout = function () {
+                        this.mouseIsOver = false;
+                    };
+
+                    var timer = setInterval (function () {
+                        if (artlink.mouseIsOver || panel.mouseIsOver) {
+                            panel.className = "artistsShown";
+                        }
+                        else {
+                            panel.className = "artists";
+                        }
+                    }, 40);
+                }
+                artistPanel();
+                
+            </script>
           </nav>
         </header>
         

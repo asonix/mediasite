@@ -27,14 +27,14 @@ header nav {
   display: inline-block;
 }
 
-header nav ul a {
+header nav ul:nth-child(1) a {
   display: inline-block;
   padding: 0px;
   padding-left: .7em;
   padding-right: .7em;
 }
 
-header nav ul a li {
+header nav ul:nth-child(1) a li {
   margin-top: -3px;
 }
 
