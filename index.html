@@ -78,7 +78,14 @@
 	       </ul>
               </li></a>
             </ul>
+	    <div class="overflow">
+	    </div>
           </nav>
+	  <div class="controls">
+	    <div class="extend">&#60;&#60;</div>
+	    <div class="left">&#60;</div>
+	    <div class="right">&#62;</div>
+	  </div>
         </header>
         
         <div class="positioning full">
@@ -212,6 +219,35 @@
     <script src="js/parallax.js"></script>
     <script src="js/getpos.js"></script>
     <script>
+      function navFix () {
+	function moveElements (list, destination) {
+	  for (var i = 0; i < list.length; i++) {
+	    console.log (destination);
+	    destination.appendChild (list[i]);
+	  }
+	}
+	
+	if (window.innerWidth <= 1200) {
+	  moveElements ([document.getElementsByTagName ('header')[0].getElementsByTagName ('ul')[0]], document.getElementsByClassName ('overflow')[0]);
+	}
+	else {
+	  moveElements (document.getElementsByClassName ('overflow')[0].childNodes, document.getElementsByTagName ('header')[0].getElementsByTagName ('nav')[0]);
+	}
+      
+	document.getElementsByClassName ('extend')[0].onclick = function () {
+	  var target = document.getElementsByClassName ('overflow')[0];
+	  if (target.className == "overflow") {
+	    target.className = "overflow overflowing";
+	    this.parentNode.className = "controls moved";
+	    this.innerHTML = "&#62;&#62;";
+	  }
+	  else {
+	    target.className = "overflow";
+	    this.parentNode.className = "controls";
+	    this.innerHTML = "&#60;&#60;";
+	  }
+	}
+      }
       var m = new Slider ();
       var inslide = document.getElementsByClassName ('inslide');
       m.custom = function () {
@@ -232,7 +268,8 @@
       
       parallax (inslide);
       sectionResize ();
-      
+      navFix ();
+
       window.onscroll = function () {
         parallax (inslide);
         //sectionResize ();
@@ -240,6 +277,7 @@
       window.onresize = function(){
         parallax (inslide);
         sectionResize ();
+	navFix ();
       };
     </script>
   </body>
