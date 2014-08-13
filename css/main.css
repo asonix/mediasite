@@ -78,7 +78,9 @@ header nav ul a li {
   vertical-align: middle;
 }
 
-header nav li ul{display:none;}
+header nav li ul{
+ display:none;
+}
 header nav li:hover ul
 {
  display:inherit;
@@ -135,6 +137,12 @@ header nav li:hover ul img{
   margin: 0px auto;
   -webkit-transition: padding .3s, width .3s;
   transition: padding .3s, width .3s;
+}
+
+.ribbon{
+  width:100%;
+  padding:1em 0px 1em;
+  margin: 1em 0px 0em;
 }
 
 section {
