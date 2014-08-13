@@ -91,11 +91,16 @@ header nav li:hover ul
  width:100%;
 
 }
-header nav li:hover ul a li{
- font-size:.5em;
- text-align:center;
- vertical-align:top;
+header nav li:hover ul a{
+ width:94px;
  margin:0px;
+ padding:0em .3em 0em .3em;
+ text-align:center;
+ font-size:.5em;
+}
+header nav li:hover ul a li{
+ margin:5px 0px 0px 0px;
+ vertical-align:top;
 }
 header nav li:hover ul img{
  position:relative;
