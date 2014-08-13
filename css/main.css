@@ -111,7 +111,9 @@ header nav li:hover ul img{
  margin-left:auto;
  margin-right:auto;
 }
-
+.smallerTopBarText{
+ font-size:.7em;
+}
 
 .topbaricon{
   position:relative;
