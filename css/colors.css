@@ -209,3 +209,10 @@ footer {
     box-shadow: inset 0px 0px 3px #000000;
   }
 }
+
+@media (max-width: 1200px) {
+  header ul li:hover ul{
+    border-bottom: 0px;
+    border-left: 2px solid #C044EE;
+  }
+}
