@@ -29,11 +29,23 @@ header {
   /*border-right: 1px solid #c939de;*/
 }
 
+header .controls .left,
+header .controls .right,
+header .controls .extend {
+  background-color: #23211e;
+}
+
+header .controls .left,
+header .controls .right,
+header .controls .extend,
 header nav ul a {
   color: #c939de;
   -webkit-transition: background-color .3s, color .3s;
   transition: background-color .3s, color .3s;
 }
+header .controls .left:hover,
+header .controls .right:hover,
+header .controls .extend:hover,
 header nav ul a:hover {
   background-color: #995dde;
   color: #09035f;
@@ -52,6 +64,11 @@ header ul li:hover ul a li{
 }
 header ul li:hover ul a:hover li{
   color:#ffffff;
+}
+
+header .overflow {
+  background-color: #23211e;
+  box-shadow: 0px 0px 5px #000000;
 }
 
 .full section:nth-child(1) {
