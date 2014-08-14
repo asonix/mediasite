@@ -91,6 +91,11 @@ section {
   box-shadow: 0px -1px 7px #000000;
 }
 
+.pauseicon {
+  background-color: #333333;
+  border-radius: 1.3em;
+}
+
 .home .full section:nth-child(2) article {
   box-shadow: 0px 0px 0px;
 }

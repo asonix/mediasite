@@ -90,6 +90,7 @@
         
         <div id="SliderPlugin" class="positioning full">
           <section>
+	    <img class="pauseicon" src="img/icons/pause.png">
             <article class="slide off">
               <div class="inslide" style="background-image: url('img/promos/tupromo.png');">
                 <!--<img src="img/promos/tupromo.png" alt="cyberpunk">-->
@@ -213,29 +214,30 @@
         //execute custom function on slide change
       }
       
-      var pausingSlider=false;
       
       setInterval (function () {
 	for (var i = 0; i < document.getElementsByClassName ('left').length; i++) {
 	  document.getElementsByClassName ('left')[i].onclick = function () {
 	    m.left ();
 	  }
+	  document.getElementsByClassName ('left')[i].onmouseover = function () {};
 	}
 	for (var i = 0; i < document.getElementsByClassName ('right').length; i++) {
 	  document.getElementsByClassName ('right')[i].onclick = function () {
 	    m.right ();
 	  }
+	  document.getElementsByClassName ('right')[i].onmouseover = function () {};
 	}
 	for (var i = 0; i < document.getElementsByClassName ('center').length; i++) {
 	  document.getElementsByClassName ('center')[i].onclick = function () {
 	    m.right ();
 	  }
 	  document.getElementsByClassName ('center')[i].onmouseover = function () {
-	    pausingSlider=true;
+	    document.getElementsByClassName ('pauseicon')[0].style.display = "block";
 	    m.stop();
 	  };
 	  document.getElementsByClassName ('center')[i].onmouseout = function () {
-	    pausingSlider=false;
+	    document.getElementsByClassName ('pauseicon')[0].style.display = "none";
 	    m.start();
 	  };
 	}

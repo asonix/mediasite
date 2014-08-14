@@ -15,6 +15,7 @@ function Slider () {
   var i = [-1, 0, 1, -3, -2];
   var slides;
   var container;
+  this.runnnig = false;
   
   this.setup = function () {
     slides = document.getElementsByClassName ('slide');
@@ -33,7 +34,6 @@ function Slider () {
     slides[2].className = "slide offtwo";
     slides[slides.length-2].className = "slide offone";
     slides[slides.length-1].className = "slide left";
-    if(pausingSlider==false){sl.start();}
   }
   
   this.run = function ()
@@ -61,15 +61,19 @@ function Slider () {
   }
   
   this.start = function () {
-    console.log ('playing');
-    sl.slider = setInterval (function ()
-    {
-      sl.run();
-    }, 6000);
+    if (sl.running == false) {
+      sl.running = true;
+      console.log ('playing');
+      sl.slider = setInterval (function ()
+      {
+        sl.run();
+      }, 6000);
+    }
   }
   
   this.stop = function () {
     console.log ('paused');
+    sl.running = false;
     clearInterval(sl.slider);
   }
   
