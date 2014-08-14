@@ -1,11 +1,36 @@
 function Slider () {
-  
-  function duplicateSlides (slides, container) {
-    const q = slides.length;
-    for (var i = 0; i < q; i++) {
-      container.appendChild (slides[i].cloneNode (true));
-    }
+ var pausingSlider=false;
+ document.getElementById('SliderPlugin').onmousever=function()
+ {
+  pausingSlider=true;
+  sl.stop();
+ }
+ document.getElementById('ControlPlugin').onmousever=function()
+ {
+  pausingSlider=true;
+  sl.stop();
+ }
+ document.getElementById('SliderPlugin').onmouseout=function()
+ {
+  pausingSlider=false;
+  sl.stop();
+  sl.start();
+ } 
+ document.getElementById('ControlPlugin').onmousever=function()
+ {
+  pausingSlider=false;
+  sl.stop();
+  sl.start();
+ }
+
+ function duplicateSlides (slides, container)
+ {
+  const q = slides.length;
+  for (var i = 0; i < q; i++)
+  {
+   container.appendChild (slides[i].cloneNode (true));
   }
+ }
   
   this.slider;
   this.custom = function () {};
@@ -31,33 +56,36 @@ function Slider () {
     slides[2].className = "slide offtwo";
     slides[slides.length-2].className = "slide offone";
     slides[slides.length-1].className = "slide left";
-    
-    sl.start ();
+    if(pausingSlider==false){sl.start();}
   }
   
-  this.run = function () {
-    for (var j = 0; j < i.length; j++) {
+  this.run = function ()
+  {
+   {
+    for (var j = 0; j < i.length; j++)
+    {
       i[j]++;
-      if (i[j] == slides.length) {
+      if (i[j] == slides.length)
+      {
         i[j] = 0;
       }
-      else if (i[j] < 0) {
+      else if (i[j] < 0)
+      {
         i[j] += slides.length;
       }
     }
-  
     slides[i[0]].className = "slide center";
     slides[i[1]].className = "slide right";
     slides[i[2]].className = "slide offtwo";
     slides[i[3]].className = "slide offone";
     slides[i[4]].className = "slide left";
-    
+   } 
     sl.custom();
   }
   
   this.start = function () {
-    sl.run();
-    sl.slider = setInterval (function () {
+    sl.slider = setInterval (function ()
+    {
       sl.run();
     }, 6000);
   }
@@ -77,12 +105,12 @@ function Slider () {
         i[j] += slides.length;
       }
     }
-    sl.start ();
+    sl.run();
   }
   
   this.right = function () {
     clearInterval (sl.slider);
-    sl.start ();
+    sl.run();
   }
   
   this.setup ();
