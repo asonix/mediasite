@@ -1,27 +1,4 @@
 function Slider () {
- var pausingSlider=false;
- document.getElementById('SliderPlugin').onmousever=function()
- {
-  pausingSlider=true;
-  sl.stop();
- }
- document.getElementById('ControlPlugin').onmousever=function()
- {
-  pausingSlider=true;
-  sl.stop();
- }
- document.getElementById('SliderPlugin').onmouseout=function()
- {
-  pausingSlider=false;
-  sl.stop();
-  sl.start();
- } 
- document.getElementById('ControlPlugin').onmousever=function()
- {
-  pausingSlider=false;
-  sl.stop();
-  sl.start();
- }
 
  function duplicateSlides (slides, container)
  {
@@ -84,6 +61,7 @@ function Slider () {
   }
   
   this.start = function () {
+    console.log ('playing');
     sl.slider = setInterval (function ()
     {
       sl.run();
@@ -91,6 +69,7 @@ function Slider () {
   }
   
   this.stop = function () {
+    console.log ('paused');
     clearInterval(sl.slider);
   }
   

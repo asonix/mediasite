@@ -182,7 +182,6 @@
       function navFix () {
 	function moveElements (list, destination) {
 	  for (var i = 0; i < list.length; i++) {
-	    console.log (destination);
 	    destination.appendChild (list[i]);
 	  }
 	}
@@ -214,6 +213,8 @@
         //execute custom function on slide change
       }
       
+      var pausingSlider=false;
+      
       setInterval (function () {
 	for (var i = 0; i < document.getElementsByClassName ('left').length; i++) {
 	  document.getElementsByClassName ('left')[i].onclick = function () {
@@ -229,6 +230,14 @@
 	  document.getElementsByClassName ('center')[i].onclick = function () {
 	    m.right ();
 	  }
+	  document.getElementsByClassName ('center')[i].onmouseover = function () {
+	    pausingSlider=true;
+	    m.stop();
+	  };
+	  document.getElementsByClassName ('center')[i].onmouseout = function () {
+	    pausingSlider=false;
+	    m.start();
+	  };
 	}
       }, 100);
       
