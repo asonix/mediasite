@@ -29,6 +29,7 @@ header {
   /*border-right: 1px solid #c939de;*/
 }
 
+header .controls,
 header .controls .left,
 header .controls .right,
 header .controls .extend {

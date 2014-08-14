@@ -75,6 +75,9 @@ header nav ul a {
   padding: 0.625em;
   float:left;
 }
+.controls{
+ height:100%;
+}
 
 header nav ul a li {
   vertical-align: middle;
