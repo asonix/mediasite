@@ -1,3 +1,14 @@
+.pauseicon {
+  display: none;
+  position: absolute;
+  top: 1em;
+  right: 6%;
+  z-index: 3;
+  padding: .3em;
+  height: 2em;
+  width: 2em;
+}
+
 .slide {
   position: absolute;
   text-align: left;

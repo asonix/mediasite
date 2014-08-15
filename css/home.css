@@ -38,6 +38,41 @@ header nav ul a li {
   margin-top: -3px;
 }
 
+header .controls {
+  position: absolute;
+  right: 0px;
+  text-align: right;
+  font-size: .7em;
+  -webkit-transition: right .3s;
+  transition: right .3s;
+}
+
+header .controls .left,
+header .controls .right,
+header .controls .extend {
+  display: inline-block;
+  width: auto;
+  padding-left: .7em;
+  padding-right: .7em;
+  font-size: 1.4em;
+}
+
+header .controls .extend {
+  display: none;
+}
+
+header .overflow {
+  position: fixed;
+  right: -86px;
+  height: 100%;
+  width: 2.7em;
+  text-align: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: right .3s;
+  transition: right .3s;
+}
+
 .full {
   position: relative;
   padding: 0px;
@@ -97,4 +132,16 @@ section:nth-child(2) article p:last-child {
 
 footer {
   position: fixed;
+}
+
+@media (max-width: 1200px) {
+  header .moved {
+    right: 86px;
+  }
+  header .controls .extend {
+    display: inline-block;
+  }
+  header .overflowing {
+    right: 0px;
+  }
 }

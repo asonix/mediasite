@@ -36,7 +36,9 @@ h1{
 }
 header h1{
   float:left;
-  display:block;
+  display:inline-block;
+  overflow-y:hidden;
+  height:2em;
 }
 .home header h1 .topbaricon {
   margin-right: .3em;
@@ -48,7 +50,10 @@ header nav {
   text-align: left;
   position:absolute;
   top:3px;
-  width:100%;
+  width:750px;
+  max-height:2em;
+  overflow-y:hidden;
+  z-index:3;
 }
 
 header nav ul {
@@ -57,16 +62,13 @@ header nav ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
-  max-height:2em;
-  overflow-y:hidden;
-  whitespace: nowrap;
 }
 .topBarGroupButton{
   max-height:1.9em;
 }
 .topBarGroupButton img{
   position:relative;
-  bottom:3px;
+  top:7px;
 }
 
 header nav ul a {
@@ -74,22 +76,26 @@ header nav ul a {
   padding: 0.625em;
   float:left;
 }
+.controls{
+ height:100%;
+ z-index:2;
+}
 
 header nav ul a li {
   vertical-align: middle;
 }
 
-header nav li ul{display:none;}
+header nav li ul{
+ display:none;
+}
 header nav li:hover ul
 {
  display:inherit;
  z-index:0;
  list-style-type:none;
  position:fixed;
- top:2em; left:0;
- min-height:3.7em;
- width:100%;
-
+ top:2em; left:0; right:0;
+ max-height:3.5em;
 }
 header nav li:hover ul a{
  width:94px;
@@ -97,6 +103,7 @@ header nav li:hover ul a{
  padding:0em .3em 0em .3em;
  text-align:center;
  font-size:.5em;
+ max-height:7em;
 }
 header nav li:hover ul a li{
  margin:5px 0px 0px 0px;
@@ -111,12 +118,20 @@ header nav li:hover ul img{
  margin-left:auto;
  margin-right:auto;
 }
-
+.smallerTopBarText{
+ font-size:.7em;
+}
 
 .topbaricon{
   position:relative;
-  height: .7em;
-  width: .7em;
+  height: 1.3em;
+  width: 1.3em;
+  top:10px;
+}
+.chipIcon{
+  position:relative;
+  height:.7em;
+  width:.7em;
 }
 
 .positioning {
@@ -127,6 +142,12 @@ header nav li:hover ul img{
   margin: 0px auto;
   -webkit-transition: padding .3s, width .3s;
   transition: padding .3s, width .3s;
+}
+
+.ribbon{
+  width:100%;
+  padding:1em 0px 1em;
+  margin: 1em 0px 0em;
 }
 
 section {
@@ -145,6 +166,16 @@ article p {
   text-align: left;
 }
 
+.posedCharacter{
+ background-image:url('../img/promos/clark_back.png');
+ width:312px;height:600px;
+ background-repeat:no-repeat;
+ background-position:center bottom;
+ display:block;
+ position:absolute;
+ bottom:0px;
+}
+
 footer {
   position: absolute;
   bottom: 0px;
@@ -159,5 +190,19 @@ footer {
   .positioning {
     padding: 0em 0em 2em;
     width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  header nav li:hover ul {
+    display:inherit;
+    z-index:0;
+    list-style-type:none;
+    position:fixed;
+    top:2em; right:81px; left: auto; bottom: 0px;
+    max-width: 3.5em;
+    max-height: none;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }

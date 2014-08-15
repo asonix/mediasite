@@ -6,6 +6,15 @@ body {
   transition: background-color .3s;
 }
 
+@font-face{
+  font-family:Sate;
+  src:url(../font/Satellite.otf);
+}
+@font-face{
+  font-family:Open;
+  src:url(../font/open-sans.light.ttf);
+}
+
 .home {
   background-color: #23232b;
 }
@@ -20,11 +29,24 @@ header {
   /*border-right: 1px solid #c939de;*/
 }
 
+header .controls,
+header .controls .left,
+header .controls .right,
+header .controls .extend {
+  background-color: #23211e;
+}
+
+header .controls .left,
+header .controls .right,
+header .controls .extend,
 header nav ul a {
   color: #c939de;
   -webkit-transition: background-color .3s, color .3s;
   transition: background-color .3s, color .3s;
 }
+header .controls .left:hover,
+header .controls .right:hover,
+header .controls .extend:hover,
 header nav ul a:hover {
   background-color: #995dde;
   color: #09035f;
@@ -43,6 +65,11 @@ header ul li:hover ul a li{
 }
 header ul li:hover ul a:hover li{
   color:#ffffff;
+}
+
+header .overflow {
+  background-color: #23211e;
+  box-shadow: 0px 0px 5px #000000;
 }
 
 .full section:nth-child(1) {
@@ -64,8 +91,21 @@ section {
   box-shadow: 0px -1px 7px #000000;
 }
 
+.pauseicon {
+  background-color: #333333;
+  border-radius: 1.3em;
+}
+
 .home .full section:nth-child(2) article {
   box-shadow: 0px 0px 0px;
+}
+
+.ribbon{
+  background-color:#995DDE;
+  font-family:Sate;
+  font-size:3em;
+  text-align:center;
+  box-shadow: 25px 0px 125px #000000;
 }
 
 article a h1 {
@@ -80,6 +120,7 @@ article .box {
   background-color: #584C60;
   border-radius: 4px;
   box-shadow: 0px 0px 10px #000000;
+  font-family:Open;
 }
 
 .skills .column {
@@ -172,5 +213,12 @@ footer {
   }
   .square .album .cover {
     box-shadow: inset 0px 0px 3px #000000;
+  }
+}
+
+@media (max-width: 1200px) {
+  header ul li:hover ul{
+    border-bottom: 0px;
+    border-left: 2px solid #C044EE;
   }
 }
