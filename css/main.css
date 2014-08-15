@@ -53,6 +53,7 @@ header nav {
   width:100%;
   max-height:2em;
   overflow-y:hidden;
+  z-index:1;
 }
 
 header nav ul {
@@ -162,6 +163,16 @@ article a {
 
 article p {
   text-align: left;
+}
+
+.posedCharacter{
+ background-image:url('../img/promos/clark_back.png');
+ width:312px;height:600px;
+ background-repeat:no-repeat;
+ background-position:center bottom;
+ display:block;
+ position:absolute;
+ bottom:0px;
 }
 
 footer {
