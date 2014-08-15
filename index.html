@@ -117,55 +117,61 @@
           </section>
         
           <section>
-           <div class="ribbon">
-            A Reimagining of the Collective
-	   </div>
-           <div>
-            <article>
-              <div class="box">
-                <div class="heading">
-                  <h1>What is ChipSwax?</h1>
-                </div>
-                <p>
-                  Over the years, I've developed a network of friends with skills
-		  and talents along with teams and groups for creative projects.
-		  ChipSwax is a public mapping of these connections and a host 
-		  for its content.
-                </p>
-                <p>
-		  The ChipSwax Network is invite-only and tightly-knit as a group.
-		  It's a container for projects of all mediums and styles. We have
-		  netlabels and web shows, code projects and art trades, you get
-		  the picture. We keep ourselves busy.
-                </p>
-                <p>
-		  But the main reason that ChipSwax exists is to serve as a sort
-		  of portfolio profile website for the artists, musicians, and
-		  other people within our groups. I made ChipSwax to show the
-		  potential in the talents of my connections to businesses and
-		  other prospective clients. Exposure is the key term, here.
-                </p>
-                <p>
-		  Despite the website's recent conception, my connections have
-		  been developing talents for years, working towards a stable
-		  living with the use of their talents, if not become entirely
-		  indepedent with them through means of employment.
-                </p>
-                <p>
-		  That's enough talk. We organize ourselves according to skills.
-		  Our developed works contain our completed projects and upcoming
-		  content. Our groups show how we interact and work together.
-                </p>
-		<p>
-		  Take a look.
-		</p>
-               </div>
-            </article>
-	    <article>
-	      <div class="posedCharacter">
-
-	      </div>
-	    </article>
+	    <div class="cityscape">
+	      <div class="layer" style="background-image: url('img/parallax/city_stars.png');"></div>
+	      <div class="layer" style="background-image: url('img/parallax/city_back.png');"></div>
+	      <div class="layer" style="background-image: url('img/parallax/city_base.png');"></div>
+	      <div class="layer" style="background-image: url('img/parallax/city_front.png');"></div>
+	    </div>
+            <div class="ribbon">
+              A Reimagining of the Collective
+	    </div>
+            <div>
+              <article>
+	        <div class="box">
+		  <div class="heading">
+		    <h1>What is ChipSwax?</h1>
+		  </div>
+		  <p>
+		    Over the years, I've developed a network of friends with skills
+		    and talents along with teams and groups for creative projects.
+		    ChipSwax is a public mapping of these connections and a host 
+		    for its content.
+		  </p>
+		  <p>
+		    The ChipSwax Network is invite-only and tightly-knit as a group.
+		    It's a container for projects of all mediums and styles. We have
+		    netlabels and web shows, code projects and art trades, you get
+		    the picture. We keep ourselves busy.
+		  </p>
+		  <p>
+		    But the main reason that ChipSwax exists is to serve as a sort
+		    of portfolio profile website for the artists, musicians, and
+		    other people within our groups. I made ChipSwax to show the
+		    potential in the talents of my connections to businesses and
+		    other prospective clients. Exposure is the key term, here.
+		  </p>
+		  <p>
+		    Despite the website's recent conception, my connections have
+		    been developing talents for years, working towards a stable
+		    living with the use of their talents, if not become entirely
+		    indepedent with them through means of employment.
+		  </p>
+		  <p>
+		    That's enough talk. We organize ourselves according to skills.
+		    Our developed works contain our completed projects and upcoming
+		    content. Our groups show how we interact and work together.
+		  </p>
+		  <p>
+		    Take a look.
+		  </p>
+		</div>
+	      </article>
+	      <article>
+		<div class="posedCharacter">
+  
+		</div>
+	      </article>
            </div>
           </section>
         </div>
@@ -211,10 +217,14 @@
       }
       var m = new Slider ();
       var inslide = document.getElementsByClassName ('inslide');
+      var city = document.getElementsByClassName ('layer');
       m.custom = function () {
         //execute custom function on slide change
       }
       
+      function resizeCity () {
+	  document.getElementsByClassName ('cityscape')[0].style.height = document.body.clientWidth / 501 * 441 + "px";
+      }
       
       setInterval (function () {
 	for (var i = 0; i < document.getElementsByClassName ('left').length; i++) {
@@ -244,18 +254,35 @@
 	}
       }, 100);
       
-      parallax (inslide);
+      var slidez = document.getElementsByTagName ('header')[0].clientHeight;
+      var slided = 550;
+      var cityz = 0;
+      parallax (inslide, 50, slidez);
+        parallax (city, 50, cityz);
       sectionResize ();
       navFix ();
+      //resizeCity ();
 
       window.onscroll = function () {
-        parallax (inslide);
+	cityz = window.innerHeight - city[0].clientHeight - document.getElementsByTagName ('footer')[0].clientHeight;
+        parallax (inslide, slided, slidez);
+        parallax ([city[0]],  50 * window.innerHeight/700, cityz);
+        parallax ([city[1]], 100 * window.innerHeight/700, cityz);
+        parallax ([city[2]], 200 * window.innerHeight/700, cityz);
+        parallax ([city[3]], 400 * window.innerHeight/700, cityz);
+	//resizeCity ();
         //sectionResize ();
       };
-      window.onresize = function(){
-        parallax (inslide);
+      window.onresize = function () {
+	cityz = window.innerHeight - 441 - 34
+        parallax (inslide, slided, slidez);
+        parallax ([city[0]],  50, cityz);
+        parallax ([city[1]], 100, cityz);
+        parallax ([city[2]], 200, cityz);
+        parallax ([city[3]], 400, cityz);
         sectionResize ();
 	navFix ();
+	//resizeCity ();
       };
     </script>
   </body>

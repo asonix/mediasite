@@ -1,4 +1,4 @@
-function parallax (elements) {
+function parallax (elements, drama, zero) {
 
   function isScrolledIntoView (elem) {
     
@@ -11,16 +11,12 @@ function parallax (elements) {
     return (((elemBottom >= docViewTop) || (elemTop >= docViewTop)) && (elemTop <= docViewBottom));
   }
   
-  var drama = elements[0].clientHeight / 1;
-  
   for (var i = 0; i < elements.length; i++) {
     if (isScrolledIntoView (elements[i]) == true) {
       var scrolltop = document.body.scrollTop || document.documentElement.scrollTop;
-      var position = /*getPosY (elements[i]) -*/ drama*scrolltop/window.innerHeight;
-      var final = position;
+      var position = -drama * (getPosY (elements[i]) - zero - scrolltop) / window.innerHeight;
       
-      console.log (document.scrollTop);
-      elements[i].style.backgroundPosition = '0px ' + final + 'px';
+      elements[i].style.backgroundPosition = '0% ' + position + 'px';
     }
   }
 }
