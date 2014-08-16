@@ -124,7 +124,7 @@ section:nth-child(2) article:nth-child(2) {
 .cityscape {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  min-height: 441px;
+  min-height: 511px;
   z-index: -1;
 }
 
