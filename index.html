@@ -261,20 +261,20 @@
       window.onscroll = function () {
 	cityz = window.innerHeight - city[0].clientHeight - document.getElementsByTagName ('footer')[0].clientHeight;
         parallax (inslide, slided, slidez);
-        parallax ([city[0]],  50 * window.innerHeight/700, cityz);
-        parallax ([city[1]], 100 * window.innerHeight/700, cityz);
-        parallax ([city[2]], 200 * window.innerHeight/700, cityz);
-        parallax ([city[3]], 400 * window.innerHeight/700, cityz);
+        parallax ([city[0]], -200 * window.innerHeight/700, cityz);
+        parallax ([city[1]], -400 * window.innerHeight/700, cityz);
+        parallax ([city[2]], -800 * window.innerHeight/700, cityz);
+        parallax ([city[3]], -1600 * window.innerHeight/700, cityz);
 	//resizeCity ();
         //sectionResize ();
       };
       window.onresize = function () {
 	cityz = window.innerHeight - 441 - 34
         parallax (inslide, slided, slidez);
-        parallax ([city[0]],  50, cityz);
-        parallax ([city[1]], 100, cityz);
-        parallax ([city[2]], 200, cityz);
-        parallax ([city[3]], 400, cityz);
+        parallax ([city[0]], -200, cityz);
+        parallax ([city[1]], -400, cityz);
+        parallax ([city[2]], -800, cityz);
+        parallax ([city[3]], -1600, cityz);
         sectionResize ();
 	navFix ();
 	//resizeCity ();

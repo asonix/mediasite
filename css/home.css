@@ -131,7 +131,7 @@ section:nth-child(2) article:nth-child(2) {
 .cityscape .layer {
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
-  /*background-repeat: repeat-x;*/
+  background-repeat: repeat-x;
   /*background-size: 100%;*/
 }
 
