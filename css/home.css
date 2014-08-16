@@ -1,6 +1,6 @@
 @font-face{
   font-family: DFI;
-  src: url(../font/DFI.ttf);
+  src: url(../font/DFIREMIX.otf);
 }
 header {
   position: fixed;
@@ -21,6 +21,8 @@ header h1 {
   padding-right: .5em;
   font-weight: normal;
   font-family:DFI;
+  text-rendering:optimizeLegibility;
+  font-feature-settings: "kern" 1;
 }
 
 header nav {
@@ -102,6 +104,7 @@ section:nth-child(1) {
 
 section:nth-child(2) {
   position: relative;
+  overflow: hidden;
   padding: 0px;
   z-index: 2;
 }
@@ -118,9 +121,34 @@ section:nth-child(2) article:nth-child(2) {
   margin-right: 0px;
 }
 
+.cityscape {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  min-height: 441px;
+  z-index: -1;
+}
+
+.cityscape .layer {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-repeat: repeat-x;
+  /*background-size: 100%;*/
+}
+
 .box {
   margin-top: 3em;
   padding: .5em 1em;
+}
+
+.heading{
+ background-color:#955DDE;
+ margin:0px -15px 0px -15px;
+}
+.heading h1{
+ padding:15px;
+ font-size:2em;
+ text-rendering:optimizeLegibility;
+ font-feature-settings:"kern" 1;
 }
 
 section:nth-child(2) article p:nth-child(1) {
