@@ -4,7 +4,7 @@ function skills () {
   
   // Code from http://www.tutorialspoint.com/json/json_ajax_example.htm
   function loadJSON (callbackfunction) {
-    var data_file = "skills/skills.json";
+    var data_file = "/json/skills_list.json";
     var http_request = new XMLHttpRequest ();
     try {
       // Opera 8.0+, Firefox, Chrome, Safari
