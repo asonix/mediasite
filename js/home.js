@@ -1,3 +1,5 @@
+var slider;
+
 function homepage () {
   function navFix () {
     function moveElements (list, destination) {
@@ -28,6 +30,7 @@ function homepage () {
     }
   }
   var m = new Slider ();
+  slider = m;
   var inslide = document.getElementsByClassName ("inslide");
   var city = document.getElementsByClassName ("layer");
   m.custom = function () {

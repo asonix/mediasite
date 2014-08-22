@@ -5,11 +5,14 @@
     <meta charset="utf-8">
     <title>ChipSwax Network</title>
     
-    <script src="js/slider.js"></script>
-    <script src="js/sectionResize.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/getpos.js"></script>
-    <script src="js/home.js"></script>
+    <script src="/js/cancel.js"></script>
+    
+    <script src="/js/slider.js"></script>
+    <script src="/js/sectionResize.js"></script>
+    <script src="/js/parallax.js"></script>
+    <script src="/js/getpos.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/skills.js"></script>
     
     <script src="js/pages.js"></script>
   </head>
@@ -18,10 +21,10 @@
     <div class="wrapper">
       <div class="content">
         <header>
-          <h1><img src="img/icons/circuit.png" class="chipIcon"/> ChipSwaX Network
+          <h1 onclick="changePage ('home');"><img src="img/icons/circuit.png" class="chipIcon"/> ChipSwaX Network
           </h1><nav>
             <ul>
-              <a href="index.html" title="home"><li>
+              <a href="index.html" title="home"><li onclick="changePage ('home');">
               <img src="img/icons/home.png" class="topbaricon"/>
               </li></a><a href="pages/works/index.html" class="topBarGroupButton" title="Works"><li>
               <img src="img/icons/works.png" class="topbaricon"/>
@@ -76,7 +79,7 @@
               <img src="img/icons/webdevelopers.png" class="topbaricon"/> 
 	       <ul>
  		 <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
- 		 <a href="pages/people/asonix.html"><li><img src="img/icons/people/asonix.png"/>Asonix</li></a>
+ 		 <a href="pages/people/asonix.html"><li onclick="changePage ('skills');"><img src="img/icons/people/asonix.png"/>Asonix</li></a>
  		 <a href="pages/people/alexprice.html"><li><img src="img/icons/people/alexprice.png"/>Alex Price</li></a>
 	       </ul>
               </li></a>
@@ -97,6 +100,12 @@
     
     <script>
       changePage ('home');
+      navlinks = document.getElementsByTagName ('a');
+      for (var i = 0; i < navlinks.length; i++) {
+	navlinks[i].onclick = function (e) {
+	  cancelEvent (e);
+	}
+      }
     </script>
   </body>
 </html>

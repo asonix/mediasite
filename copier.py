@@ -31,6 +31,7 @@ os.chdir ('/home/riley/site')
 for indexfile in  locate ('index.html'):
     contents = open (indexfile, 'r').readlines ()
     contents = find_and_replace ('index.html','',contents)
+    # contents = find_and_replace ('../','/',contents)
     contents = find_and_replace ('colors_pastel.css','colors.css',contents)
     # contents = find_and_replace ('colors.css','colors_pastel.css',contents)
     f = open (indexfile, 'w')

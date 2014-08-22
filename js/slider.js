@@ -60,7 +60,7 @@ function Slider () {
       sl.running = true;
       sl.slider = setInterval (function () {
         sl.run();
-      }, 6000);
+      }, 2000);
     }
   }
   

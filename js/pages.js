@@ -1,37 +1,9 @@
 function changePage (page) {
-  var jsonObj;
   
-  var customcommands = {
-    home: function () {
-      var imgurl = document.getElementsByClassName ('inslide')[0].style.backgroundImage.substring (4,document.getElementsByClassName ('inslide')[0].style.backgroundImage.length-1);
-      while (imgurl.indexOf ("\"") != -1) {
-        imgurl = imgurl.replace ("\"", "");
-      }
-      
-      var img = new Image();
-      img.src = imgurl;
-      img.onload = function () {
-        var t = setInterval (function () {
-          if (document.getElementById ('doneloading') != null) {
-            clearInterval (t);
-            console.log ('loaded');
-            homepage ();
-            img.parentNode.removeChild(img);
-          }
-        }, 25);
-      }
-      img.style.position = "fixed";
-      img.style.left = "-99999%";
-      document.body.appendChild (img);
-    },
-    skills: function () {
-      //pass
-    }
-  }
-
+  var jsonObj;
   // Code from http://www.tutorialspoint.com/json/json_ajax_example.htm
   function loadJSON (callbackfunction) {
-    var data_file = "json/" + page + ".json";
+    var data_file = "/json/" + page + ".json";
     console.log (data_file);
     var http_request = new XMLHttpRequest ();
     try {
@@ -65,10 +37,62 @@ function changePage (page) {
   }
   
   //custom code
+  var customcommands = {
+    home: function () {
+      var imgurl = document.getElementsByClassName ('inslide')[0].style.backgroundImage.substring (4,document.getElementsByClassName ('inslide')[0].style.backgroundImage.length-1);
+      while (imgurl.indexOf ("\"") != -1) {
+        imgurl = imgurl.replace ("\"", "");
+      }
+      
+      var img = new Image();
+      img.src = imgurl;
+      img.onload = function () {
+        var t = setInterval (function () {
+          if (document.getElementById ('doneloading') != null) {
+            clearInterval (t);
+            console.log ('loaded');
+            homepage ();
+            img.parentNode.removeChild(img);
+          }
+        }, 25);
+      }
+      img.style.position = "fixed";
+      img.style.left = "-99999%";
+      document.body.appendChild (img);
+    },
+    skills: function () {
+      skills ();
+    }
+  }
+  
   loadJSON (function (jsonObj) {
+    
+    slider != null ? slider.stop() : console.log ('oops');
+    window.onscroll = function () {};
+    window.onresize = function () {};
+    
     document.title = jsonObj.page.title;
+    var prev;
+    var iter = 0;
     while (document.getElementsByTagName ('link').length > 0) {
-      document.getElementsByTagName ('link')[0].remove ();
+      if (document.getElementsByTagName ('link')[iter] == prev) {
+        iter++;
+      }
+      found = false;
+      for (var i = 0; i < jsonObj.page.css.length; i++) {
+        if (String(document.getElementsByTagName ('link')[iter]).indexOf (jsonObj.page.css[i]) != -1) {
+          found = true;
+          jsonObj.page.css.splice (i, 1);
+          break;
+        }
+      }
+      prev = document.getElementsByTagName ('link')[iter];
+      if (found == false) {
+        document.getElementsByTagName ('link')[iter].remove ();
+      }
+      if (iter > document.getElementsByTagName ('link').length) {
+        break;
+      }
     }
     for (var i = 0; i < jsonObj.page.css.length; i++) {
       var link = document.createElement ('link');
@@ -81,13 +105,12 @@ function changePage (page) {
     document.getElementsByClassName ('changing')[0].innerHTML = jsonObj.page.content[0];
     document.getElementsByClassName ('changing')[1].innerHTML = jsonObj.page.content[1];
     
+    window.history.pushState(page, page, "/" + page);
     
-    //var t = setInterval (function () {
-    //  console.log (document.getElementById ('doneloading'));
-    //  if (document.getElementById ('doneloading') != null) {
-    //    clearInterval (t);
-        customcommands[page] ();
-    //  }
-    //}, 25);
+    customcommands[page] ();
   });
 }
+
+window.addEventListener ("popstate", function (e) {
+  changePage (e.state);
+});
