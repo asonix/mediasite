@@ -1,4 +1,3 @@
-var slider;
 
 function homepage () {
   function navFix () {
@@ -29,11 +28,10 @@ function homepage () {
       }
     }
   }
-  var m = new Slider ();
-  slider = m;
+  slider == null ? slider = new Slider () : slider.start ();
   var inslide = document.getElementsByClassName ("inslide");
   var city = document.getElementsByClassName ("layer");
-  m.custom = function () {
+  slider.custom = function () {
     //execute custom function on slide change
     sectionResize ();
   }
@@ -45,27 +43,27 @@ function homepage () {
   setInterval (function () {
     for (var i = 0; i < document.getElementsByClassName ("left").length; i++) {
       document.getElementsByClassName ("left")[i].onclick = function () {
-        m.left ();
+        slider.left ();
       }
       document.getElementsByClassName ("left")[i].onmouseover = function () {};
     }
     for (var i = 0; i < document.getElementsByClassName ("right").length; i++) {
       document.getElementsByClassName ("right")[i].onclick = function () {
-        m.right ();
+        slider.right ();
       }
       document.getElementsByClassName ("right")[i].onmouseover = function () {};
     }
     for (var i = 0; i < document.getElementsByClassName ("center").length; i++) {
       document.getElementsByClassName ("center")[i].onclick = function () {
-        m.right ();
+        slider.right ();
       }
       document.getElementsByClassName ("center")[i].onmouseover = function () {
         document.getElementsByClassName ("pauseicon")[0].style.display = "block";
-        m.stop();
+        slider.stop();
       };
       document.getElementsByClassName ("center")[i].onmouseout = function () {
         document.getElementsByClassName ("pauseicon")[0].style.display = "none";
-        m.start();
+        slider.start();
       };
     }
   }, 100);
@@ -96,5 +94,5 @@ function homepage () {
     sectionResize ();
     navFix ();
   };
-  m.run();
+  slider.run();
 }
