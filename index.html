@@ -99,7 +99,8 @@
     </div>
     
     <script>
-      changePage ('home');
+      var currentpage = window.location.pathname.split ('/')[1];
+      currentpage == "" ? changePage ('home') : changePage (currentpage);
       navlinks = document.getElementsByTagName ('a');
       for (var i = 0; i < navlinks.length; i++) {
 	navlinks[i].onclick = function (e) {
