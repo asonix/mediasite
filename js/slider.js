@@ -1,10 +1,8 @@
 function Slider () {
 
- function duplicateSlides (slides, container)
- {
+ function duplicateSlides (slides, container) {
   const q = slides.length;
-  for (var i = 0; i < q; i++)
-  {
+  for (var i = 0; i < q; i++) {
    container.appendChild (slides[i].cloneNode (true));
   }
  }
@@ -34,20 +32,18 @@ function Slider () {
     slides[2].className = "slide offtwo";
     slides[slides.length-2].className = "slide offone";
     slides[slides.length-1].className = "slide left";
+    for (var i = 0; i < slides.length; i++) {
+      console.log (slides[i].className);
+    }
   }
   
-  this.run = function ()
-  {
-   {
-    for (var j = 0; j < i.length; j++)
-    {
+  this.run = function () {
+    for (var j = 0; j < i.length; j++) {
       i[j]++;
-      if (i[j] == slides.length)
-      {
+      if (i[j] == slides.length) {
         i[j] = 0;
       }
-      else if (i[j] < 0)
-      {
+      else if (i[j] < 0) {
         i[j] += slides.length;
       }
     }
@@ -56,23 +52,19 @@ function Slider () {
     slides[i[2]].className = "slide offtwo";
     slides[i[3]].className = "slide offone";
     slides[i[4]].className = "slide left";
-   } 
     sl.custom();
   }
   
   this.start = function () {
     if (sl.running == false) {
       sl.running = true;
-      console.log ('playing');
-      sl.slider = setInterval (function ()
-      {
+      sl.slider = setInterval (function () {
         sl.run();
       }, 6000);
     }
   }
   
   this.stop = function () {
-    console.log ('paused');
     sl.running = false;
     clearInterval(sl.slider);
   }

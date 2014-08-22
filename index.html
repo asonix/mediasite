@@ -5,10 +5,13 @@
     <meta charset="utf-8">
     <title>ChipSwax Network</title>
     
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href="css/home.css" rel="stylesheet" type="text/css">
-    <link href="css/slider.css" rel="stylesheet" type="text/css">
-    <link href="css/colors.css" rel="stylesheet" type="text/css">
+    <script src="js/slider.js"></script>
+    <script src="js/sectionResize.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/getpos.js"></script>
+    <script src="js/home.js"></script>
+    
+    <script src="js/pages.js"></script>
   </head>
 
   <body class="home">
@@ -81,100 +84,10 @@
 	    <div class="overflow">
 	    </div>
           </nav>
-	  <div id="ControlPlugin" class="controls">
-	    <div class="extend">&#60;&#60;</div>
-	    <div class="left">&#60;</div>
-	    <div class="right">&#62;</div>
-	  </div>
+	  <div class="homepage changing"></div>
         </header>
-        
-        <div id="SliderPlugin" class="positioning full">
-          <section>
-	    <img class="pauseicon" src="img/icons/pause.png">
-            <article class="slide off">
-              <div class="inslide" style="background-image: url('img/v.gif'); background-size: auto;">
-                <!--<img src="img/promos/tupromo.png" alt="cyberpunk">-->
-              </div>
-            </article>
-            <article class="slide off">
-              <div class="inslide" style="background-image: url('img/promos/tupromo.png');">
-                <!--<img src="img/promos/tupromo.png" alt="cyberpunk">-->
-              </div>
-            </article>
-            <article class="slide off">
-              <div class="inslide" style="background-image: url('img/promos/blacksquaresPromo.png');">
-                <!--<img src="img/promos/blacksquaresPromo.png" alt="netlabel">-->
-              </div>
-            </article>
-            <article class="slide off">
-              <div class="inslide" style="background-image: url('img/promos/githubPromo.png');">
-                <!--<img src="img/promos/githubPromo.png" alt="open source">-->
-              </div>
-            </article>
-            <article class="slide off">
-              <div class="inslide" style="background-image: url('img/promos/dinoPlaceholder.png');">
-                <!--<img src="img/promos/dinoPlaceholder.png" alt="temporary">-->
-              </div>
-            </article>
-            <article class="slide off">
-               <object class="inslide" style="width: 100%; height: 100%;" data="pages/artists/circuitfry/index.html"></object>
-            </article>
-          </section>
-        
-          <section>
-	    <div class="cityscape">
-	      <div class="layer" style="background-image: url('img/parallax/city_stars.png');"></div>
-	      <div class="layer" style="background-image: url('img/parallax/city_back.png');"></div>
-	      <div class="layer" style="background-image: url('img/parallax/city_base.png');"></div>
-	      <div class="layer" style="background-image: url('img/parallax/city_front.png');"></div>
-	    </div>
-            <div class="ribbon">
-              A Reimagining of the Collective
-	    </div>
-            <div>
-              <article>
-	        <div class="box">
-		  <div class="heading">
-		    <h1>What is ChipSwax?</h1>
-		  </div>
-		  <p>
-		    Over the years, I've developed a network of talented connections
-                    and teams for creative projects. ChipSwax is a public mapping of
-                    these connections and a host for its content.
-		  </p>
-		  <p>
-		    ChipSwax Network is invite-only and tightly-knit. We have
-		    netlabels and web shows, code projects and art trades, you get
-		    the picture. We keep ourselves busy.
-		  </p>
-		  <p>
-		    ChipSwax exists to serve as a portfolio website people within
-                    our groups, to show the potential in my connections to businesses
-                    and other prospective clients.
-		  </p>
-		  <p>
-		    Despite the website's recent conception, my connections have
-		    been developing talents for years. This very website is a
-                    collaborative effort.
-		  </p>
-		  <p>
-		    That's enough talk. We organize ourselves according to skills.
-		    Our developed works contain our completed projects and upcoming
-		    content. Our groups show how we interact and work together.
-		  </p>
-		  <p>
-		    Take a look.
-		  </p>
-		</div>
-	      </article>
-	      <article>
-		<div class="posedCharacter">
-  
-		</div>
-	      </article>
-           </div>
-          </section>
-        </div>
+	
+        <div class="homepage changing"></div>
         
         <footer>
           &copy; ChipSwax Network 2014
@@ -182,108 +95,8 @@
       </div>
     </div>
     
-    <script src="js/slider.js"></script>
-    <script src="js/sectionResize.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/getpos.js"></script>
     <script>
-      function navFix () {
-	function moveElements (list, destination) {
-	  for (var i = 0; i < list.length; i++) {
-	    destination.appendChild (list[i]);
-	  }
-	}
-	
-	if (window.innerWidth <= 1200) {
-	  moveElements ([document.getElementsByTagName ('header')[0].getElementsByTagName ('ul')[0]], document.getElementsByClassName ('overflow')[0]);
-	}
-	else {
-	  moveElements (document.getElementsByClassName ('overflow')[0].childNodes, document.getElementsByTagName ('header')[0].getElementsByTagName ('nav')[0]);
-	}
-      
-	document.getElementsByClassName ('extend')[0].onclick = function () {
-	  var target = document.getElementsByClassName ('overflow')[0];
-	  if (target.className == "overflow") {
-	    target.className = "overflow overflowing";
-	    this.parentNode.className = "controls moved";
-	    this.innerHTML = "&#62;&#62;";
-	  }
-	  else {
-	    target.className = "overflow";
-	    this.parentNode.className = "controls";
-	    this.innerHTML = "&#60;&#60;";
-	  }
-	}
-      }
-      var m = new Slider ();
-      var inslide = document.getElementsByClassName ('inslide');
-      var city = document.getElementsByClassName ('layer');
-      m.custom = function () {
-        //execute custom function on slide change
-      }
-      
-      function resizeCity () {
-	  document.getElementsByClassName ('cityscape')[0].style.height = document.body.clientWidth / 501 * 441 + "px";
-      }
-      
-      setInterval (function () {
-	for (var i = 0; i < document.getElementsByClassName ('left').length; i++) {
-	  document.getElementsByClassName ('left')[i].onclick = function () {
-	    m.left ();
-	  }
-	  document.getElementsByClassName ('left')[i].onmouseover = function () {};
-	}
-	for (var i = 0; i < document.getElementsByClassName ('right').length; i++) {
-	  document.getElementsByClassName ('right')[i].onclick = function () {
-	    m.right ();
-	  }
-	  document.getElementsByClassName ('right')[i].onmouseover = function () {};
-	}
-	for (var i = 0; i < document.getElementsByClassName ('center').length; i++) {
-	  document.getElementsByClassName ('center')[i].onclick = function () {
-	    m.right ();
-	  }
-	  document.getElementsByClassName ('center')[i].onmouseover = function () {
-	    document.getElementsByClassName ('pauseicon')[0].style.display = "block";
-	    m.stop();
-	  };
-	  document.getElementsByClassName ('center')[i].onmouseout = function () {
-	    document.getElementsByClassName ('pauseicon')[0].style.display = "none";
-	    m.start();
-	  };
-	}
-      }, 100);
-      
-      var slidez = document.getElementsByTagName ('header')[0].clientHeight;
-      var slided = 550;
-      var cityz = 0;
-      parallax (inslide, 50, slidez);
-        parallax (city, 50, cityz);
-      sectionResize ();
-      navFix ();
-      //resizeCity ();
-
-      window.onscroll = function () {
-	cityz = window.innerHeight - city[0].clientHeight - document.getElementsByTagName ('footer')[0].clientHeight;
-        parallax (inslide, slided, slidez);
-        parallax ([city[0]], -10 * window.innerHeight/700, cityz);
-        parallax ([city[1]], -800 * window.innerHeight/700, cityz);
-        parallax ([city[2]], -400 * window.innerHeight/700, cityz);
-        parallax ([city[3]], -200 * window.innerHeight/700, cityz);
-	//resizeCity ();
-        //sectionResize ();
-      };
-      window.onresize = function () {
-	cityz = window.innerHeight - 441 - 34
-        parallax (inslide, slided, slidez);
-        parallax ([city[0]], -10, cityz);
-        parallax ([city[1]], -800, cityz);
-        parallax ([city[2]], -400, cityz);
-        parallax ([city[3]], -200, cityz);
-        sectionResize ();
-	navFix ();
-	//resizeCity ();
-      };
+      changePage ('home');
     </script>
   </body>
 </html>
