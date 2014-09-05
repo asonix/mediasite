@@ -1,16 +1,16 @@
 {
-    "page" : {
-        "title" : "skills",
-        "css" : [
-            "main.css",
-            "home.css",
-            "skills.css",
-            "colors.css"
-        ],
-        "classes" : [""],
-        "content" : [
-            "",
-            "<div class=\"positioning\"><section><article class=\"skills\"><h1>Select the categories to find a creator</h1><div class=\"column\"><div class=\"title\">General</div><div class=\"list\"></div></div><div class=\"column\"><div class=\"title\">Specific</div><div class=\"list\"></div></div><div class=\"column\"><div class=\"title\">Creator</div><div class=\"list\"></div></div></article></section</div>"
-        ]
-    }
+  "page" : {
+    "title" : "skills",
+    "css" : [
+      "main.css",
+    "home.css",
+    "skills.css",
+    "colors.css"
+      ],
+    "classes" : [""],
+    "content" : [
+      "",
+    "<div class=\"positioning\"><section><article class=\"skills\"><h1>Select the categories to find a creator</h1><div class=\"column\"><div class=\"title\">General</div><div class=\"list\"></div></div><div class=\"column\"><div class=\"title\">Specific</div><div class=\"list\"></div></div><div class=\"column\"><div class=\"title\">Creator</div><div class=\"list\"></div></div></article></section</div>"
+      ]
+  }
 }

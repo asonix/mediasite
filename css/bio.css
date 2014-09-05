@@ -1,5 +1,5 @@
 header h1 {
-    padding: 0px;
+  padding: 0px;
 }
 
 .positioning {
@@ -13,7 +13,7 @@ header h1 {
 }
 
 @media (max-width: 1000px) {
-    .positioning {
-        padding: 0em 0em 2em;
-    }
+  .positioning {
+    padding: 0em 0em 2em;
+  }
 }

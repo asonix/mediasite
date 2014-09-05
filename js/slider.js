@@ -1,12 +1,12 @@
 function Slider () {
 
- function duplicateSlides (slides, container) {
-  const q = slides.length;
-  for (var i = 0; i < q; i++) {
-   container.appendChild (slides[i].cloneNode (true));
+  function duplicateSlides (slides, container) {
+    const q = slides.length;
+    for (var i = 0; i < q; i++) {
+      container.appendChild (slides[i].cloneNode (true));
+    }
   }
- }
-  
+
   this.slider;
   this.custom = function () {};
   var sl = this;
@@ -14,16 +14,16 @@ function Slider () {
   var slides;
   var container;
   this.runnnig = false;
-  
+
   this.setup = function () {
     slides = document.getElementsByClassName ('slide');
     container = document.getElementsByTagName ('section')[0];
-    
+
     while (slides.length < 5) {
       duplicateSlides (slides, container);
       slides = document.getElementsByClassName('slide');
     }
-    
+
     for (var i = 0; i < slides.length; i++) {
       slides[i].className = "slide off";
     }
@@ -36,7 +36,7 @@ function Slider () {
       console.log (slides[i].className);
     }
   }
-  
+
   this.run = function () {
     for (var j = 0; j < i.length; j++) {
       i[j]++;
@@ -54,7 +54,7 @@ function Slider () {
     slides[i[4]].className = "slide left";
     sl.custom();
   }
-  
+
   this.start = function () {
     if (sl.running == false) {
       sl.running = true;
@@ -63,12 +63,12 @@ function Slider () {
       }, 2000);
     }
   }
-  
+
   this.stop = function () {
     sl.running = false;
     clearInterval(sl.slider);
   }
-  
+
   this.left = function () {
     clearInterval (sl.slider);
     for (var j = 0; j < i.length; j++) {
@@ -82,11 +82,11 @@ function Slider () {
     }
     sl.run();
   }
-  
+
   this.right = function () {
     clearInterval (sl.slider);
     sl.run();
   }
-  
+
   this.setup ();
 }

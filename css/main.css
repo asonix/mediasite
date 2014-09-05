@@ -77,8 +77,8 @@ header nav ul a {
   float:left;
 }
 .controls{
- height:100%;
- z-index:2;
+  height:100%;
+  z-index:2;
 }
 
 header nav ul a li {
@@ -86,40 +86,40 @@ header nav ul a li {
 }
 
 header nav li ul{
- display:none;
+  display:none;
 }
 header nav li:hover ul
 {
- display:inherit;
- z-index:0;
- list-style-type:none;
- position:fixed;
- top:2em; left:0; right:0;
- max-height:3.5em;
+  display:inherit;
+  z-index:0;
+  list-style-type:none;
+  position:fixed;
+  top:2em; left:0; right:0;
+  max-height:3.5em;
 }
 header nav li:hover ul a{
- width:94px;
- margin:0px;
- padding:0em .3em 0em .3em;
- text-align:center;
- font-size:.5em;
- max-height:7em;
+  width:94px;
+  margin:0px;
+  padding:0em .3em 0em .3em;
+  text-align:center;
+  font-size:.5em;
+  max-height:7em;
 }
 header nav li:hover ul a li{
- margin:5px 0px 0px 0px;
- vertical-align:top;
+  margin:5px 0px 0px 0px;
+  vertical-align:top;
 }
 header nav li:hover ul img{
- position:relative;
- top:0.3em;
- height:3.5em;
- width:3.5em;
- display:block;
- margin-left:auto;
- margin-right:auto;
+  position:relative;
+  top:0.3em;
+  height:3.5em;
+  width:3.5em;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
 .smallerTopBarText{
- font-size:.7em;
+  font-size:.7em;
 }
 
 .topbaricon{
@@ -167,14 +167,14 @@ article p {
 }
 
 .posedCharacter{
- background-image:url('../img/promos/clark_back.png');
- width:312px;height:600px;
- background-repeat:no-repeat;
- background-position:center bottom;
- display:block;
- position:absolute;
- bottom:0px;
- padding-left:20%;
+  background-image:url('../img/promos/clark_back.png');
+  width:312px;height:600px;
+  background-repeat:no-repeat;
+  background-position:center bottom;
+  display:block;
+  position:absolute;
+  bottom:0px;
+  padding-left:20%;
 }
 
 footer {

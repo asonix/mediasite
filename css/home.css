@@ -141,14 +141,14 @@ section:nth-child(2) article:nth-child(2) {
 }
 
 .heading{
- background-color:#955DDE;
- margin:0px -15px 0px -15px;
+  background-color:#955DDE;
+  margin:0px -15px 0px -15px;
 }
 .heading h1{
- padding:15px;
- font-size:2em;
- text-rendering:optimizeLegibility;
- font-feature-settings:"kern" 1;
+  padding:15px;
+  font-size:2em;
+  text-rendering:optimizeLegibility;
+  font-feature-settings:"kern" 1;
 }
 
 section:nth-child(2) article p:nth-child(1) {

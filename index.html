@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>ChipSwax Network</title>
-    
-    <script src="/js/cancel.js"></script>
-    <script>var slider;</script>
-    <script src="/js/slider.js"></script>
-    <script src="/js/sectionResize.js"></script>
-    <script src="/js/parallax.js"></script>
-    <script src="/js/getpos.js"></script>
-    <script src="/js/home.js"></script>
-    <script src="/js/skills.js"></script>
-    
-    <script src="js/pages.js"></script>
-  </head>
+<head>
+<meta charset="utf-8">
+<title>ChipSwax Network</title>
 
-  <body class="home">
-    <div class="wrapper">
-      <div class="content">
-        <header>
-          <h1 onclick="changePage ('home');"><img src="img/icons/circuit.png" class="chipIcon"/> ChipSwaX Network
-          </h1><nav>
+<script src="/js/cancel.js"></script>
+<script>var slider;</script>
+<script src="/js/slider.js"></script>
+<script src="/js/sectionResize.js"></script>
+<script src="/js/parallax.js"></script>
+<script src="/js/getpos.js"></script>
+<script src="/js/home.js"></script>
+<script src="/js/skills.js"></script>
+
+<script src="js/pages.js"></script>
+</head>
+
+<body class="home">
+<div class="wrapper">
+  <div class="content">
+    <header>
+      <h1 onclick="changePage ('home');"><img src="img/icons/circuit.png" class="chipIcon"/> ChipSwaX Network
+      </h1><nav>
+        <ul>
+          <a href="index.html" title="home"><li onclick="changePage ('home');">
+            <img src="img/icons/home.png" class="topbaricon"/>
+          </li></a><a href="pages/works/index.html" class="topBarGroupButton" title="Works"><li>
+            <img src="img/icons/works.png" class="topbaricon"/>
             <ul>
-              <a href="index.html" title="home"><li onclick="changePage ('home');">
-              <img src="img/icons/home.png" class="topbaricon"/>
-              </li></a><a href="pages/works/index.html" class="topBarGroupButton" title="Works"><li>
-              <img src="img/icons/works.png" class="topbaricon"/>
-	       <ul>
- 		 <a href="pages/works/tu.html"><li><img src="img/icons/works/work_tu.png"/>
-		     <span class="smallerTopBarText">Tu (Upcoming)</span>
-		 </li></a>
- 		 <a href="pages/people/circuitfry.html"><li><img src="img/icons/works/works_albums.png"/>Albums</li></a>
-	       </ul>
-              </li></a><a href="groups/index.html" class="topBarGroupButton" title="Groups"><li>
-              <img src="img/icons/groups.png" class="topbaricon"/>
-	       <ul>
- 		 <a href="pages/groups/tucrew.html"><li><img src="img/icons/works/work_tu.png"/>Tu Crew</li></a>
- 		 <a href="pages/groups/blacksquares.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Blacksquares</li></a>
-	       </ul>
+              <a href="pages/works/tu.html"><li><img src="img/icons/works/work_tu.png"/>
+                <span class="smallerTopBarText">Tu (Upcoming)</span>
               </li></a>
-
-              <a href="pages/artists/index.html" class="topBarGroupButton" title="Artists">
-               <li>
-		<img src="img/icons/artists.png" class="topbaricon"/>
-                <ul>
- 		 <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
-		 <a href="pages/people/catstherine.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Catstherine</li></a>
-		 <a href="pages/people/syrico.html"><li><img src="img/icons/people/syrico.png"/>Syrico</li></a>
-	        </ul>
-               </li>
-	      </a>
-
-	      <a href="pages/producers/index.html" class="topBarGroupButton" title="Producers"><li>
-              <img src="img/icons/producers.png" class="topbaricon"/> 
-	       <ul>
- 		 <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
- 		 <a href="pages/people/catstherine.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Catstherine</li></a>
-	       </ul>
-              </li></a><a href="pages/djs/index.html" class="topBarGroupButton" title="DJs"><li>
-              <img src="img/icons/djs.png" class="topbaricon"/>
-	       <ul>
- 		 <a href="pages/people/tripdiam.html"><li><img src="img/icons/people/tripdiam.png"/>TripDiam</li></a>
-	       </ul>
-              </li></a><a href="pages/voiceartists/index.html" class="topBarGroupButton" title="Voice Artists"><li>
-              <img src="img/icons/voiceartists.png" class="topbaricon"/> 
-	       <ul>
- 		 <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
-	       </ul>
-              </li></a><a href="pages/videoeditors/index.html" class="topBarGroupButton" title="Video Editors"><li>
-              <img src="img/icons/videoeditors.png" class="topbaricon"/> 
-	       <ul>
- 		 <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
- 		 <a href="pages/people/catstherine.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Catstherine</li></a>
-	       </ul>
-              </li></a><a href="pages/webdevelopers/index.html" class="topBarGroupButton" title="Web Developers"><li>
-              <img src="img/icons/webdevelopers.png" class="topbaricon"/> 
-	       <ul>
- 		 <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
- 		 <a href="pages/people/asonix.html"><li onclick="changePage ('skills');"><img src="img/icons/people/asonix.png"/>Asonix</li></a>
- 		 <a href="pages/people/alexprice.html"><li><img src="img/icons/people/alexprice.png"/>Alex Price</li></a>
-	       </ul>
-              </li></a>
+              <a href="pages/people/circuitfry.html"><li><img src="img/icons/works/works_albums.png"/>Albums</li></a>
             </ul>
-	    <div class="overflow">
-	    </div>
-          </nav>
-	  <div class="homepage changing"></div>
-        </header>
-	
-        <div class="homepage changing"></div>
-        
-        <footer>
-          &copy; ChipSwax Network 2014
-        </footer>
-      </div>
-    </div>
-    
-    <script>
-      var currentpage = window.location.pathname.split ('/')[1];
-      currentpage == "" ? changePage ('home') : changePage (currentpage);
-      navlinks = document.getElementsByTagName ('a');
-      for (var i = 0; i < navlinks.length; i++) {
-	navlinks[i].onclick = function (e) {
-	  cancelEvent (e);
-	}
-      }
-    </script>
-  </body>
+          </li></a><a href="groups/index.html" class="topBarGroupButton" title="Groups"><li>
+            <img src="img/icons/groups.png" class="topbaricon"/>
+            <ul>
+              <a href="pages/groups/tucrew.html"><li><img src="img/icons/works/work_tu.png"/>Tu Crew</li></a>
+              <a href="pages/groups/blacksquares.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Blacksquares</li></a>
+            </ul>
+          </li></a>
+
+          <a href="pages/artists/index.html" class="topBarGroupButton" title="Artists">
+            <li>
+            <img src="img/icons/artists.png" class="topbaricon"/>
+            <ul>
+              <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
+              <a href="pages/people/catstherine.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Catstherine</li></a>
+              <a href="pages/people/syrico.html"><li><img src="img/icons/people/syrico.png"/>Syrico</li></a>
+            </ul>
+            </li>
+          </a>
+
+          <a href="pages/producers/index.html" class="topBarGroupButton" title="Producers"><li>
+            <img src="img/icons/producers.png" class="topbaricon"/> 
+            <ul>
+              <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
+              <a href="pages/people/catstherine.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Catstherine</li></a>
+            </ul>
+          </li></a><a href="pages/djs/index.html" class="topBarGroupButton" title="DJs"><li>
+            <img src="img/icons/djs.png" class="topbaricon"/>
+            <ul>
+              <a href="pages/people/tripdiam.html"><li><img src="img/icons/people/tripdiam.png"/>TripDiam</li></a>
+            </ul>
+          </li></a><a href="pages/voiceartists/index.html" class="topBarGroupButton" title="Voice Artists"><li>
+            <img src="img/icons/voiceartists.png" class="topbaricon"/> 
+            <ul>
+              <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
+            </ul>
+          </li></a><a href="pages/videoeditors/index.html" class="topBarGroupButton" title="Video Editors"><li>
+            <img src="img/icons/videoeditors.png" class="topbaricon"/> 
+            <ul>
+              <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
+              <a href="pages/people/catstherine.html"><li><img src="img/icons/groups/groups_blacksquares.png"/>Catstherine</li></a>
+            </ul>
+          </li></a><a href="pages/webdevelopers/index.html" class="topBarGroupButton" title="Web Developers"><li>
+            <img src="img/icons/webdevelopers.png" class="topbaricon"/> 
+            <ul>
+              <a href="pages/people/circuitfry.html"><li><img src="img/icons/people/circuitfry.png"/>Circuitfry</li></a>
+              <a href="pages/people/asonix.html"><li onclick="changePage ('skills');"><img src="img/icons/people/asonix.png"/>Asonix</li></a>
+              <a href="pages/people/alexprice.html"><li><img src="img/icons/people/alexprice.png"/>Alex Price</li></a>
+            </ul>
+          </li></a>
+        </ul>
+        <div class="overflow">
+        </div>
+      </nav>
+      <div class="homepage changing"></div>
+    </header>
+
+    <div class="homepage changing"></div>
+
+    <footer>
+      &copy; ChipSwax Network 2014
+    </footer>
+  </div>
+</div>
+
+<script>
+var currentpage = window.location.pathname.split ('/')[1];
+currentpage == "" ? changePage ('home') : changePage (currentpage);
+navlinks = document.getElementsByTagName ('a');
+for (var i = 0; i < navlinks.length; i++) {
+  navlinks[i].onclick = function (e) {
+    cancelEvent (e);
+  }
+}
+</script>
+</body>
 </html>

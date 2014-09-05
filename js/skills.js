@@ -1,7 +1,7 @@
 function skills () {
 
   var jsObjByPerson;
-  
+
   // Code from http://www.tutorialspoint.com/json/json_ajax_example.htm
   function loadJSON (callbackfunction) {
     var data_file = "/json/skills_list.json";
@@ -35,7 +35,7 @@ function skills () {
     http_request.send ();
     return true;
   }
-  
+
   // Custom code
   /* OBJECT IN STRUCTURE
    * 
@@ -49,20 +49,20 @@ function skills () {
    * jsObjBySkill[key1] == { key2 : [person1, person2], key3 : [person2, person3] };
    * 
    */
-  
+
   var jsObjBySkill = {};
-  
+
   loadJSON (function (jsObjByPerson) {
     for (var i in jsObjByPerson.person) {
       for (var j in jsObjByPerson.person[i].skills) {
         for (var key in jsObjByPerson.person[i].skills[j]) {
           if (jsObjByPerson.person[i].skills[j].hasOwnProperty (key)) {
-            
+
             // creates new specific key, ex. Digital
             var newkey = jsObjByPerson.person[i].skills[j][key];
             var specific = {};
             specific[newkey] = [jsObjByPerson.person[i]];
-             
+
             if (jsObjBySkill.hasOwnProperty (key)) {
               if (jsObjBySkill[key].hasOwnProperty (newkey)) {
                 jsObjBySkill[key][newkey].push (jsObjByPerson.person[i]);
@@ -81,7 +81,7 @@ function skills () {
         }
       }
     }
-    
+
     for (var i in jsObjBySkill) {
       if (jsObjBySkill.hasOwnProperty (i)) {
         for (var j in jsObjBySkill[i]) {
@@ -93,12 +93,12 @@ function skills () {
         }
       }
     }
-    
+
     var columns = document.getElementsByClassName ('list');
     var left    = columns[0];
     var center  = columns[1];
     var right   = columns[2];
-    
+
     function loadMiddle (key) {
       for (var i in jsObjBySkill[key]) {
         if (jsObjBySkill[key].hasOwnProperty (i)) {
@@ -126,14 +126,14 @@ function skills () {
       }
       loadRight (key, center.getElementsByClassName ('item')[0].innerHTML);
     }
-    
+
     function loadRight (key1, key2) {
       for (var i in jsObjBySkill[key1][key2]) {
         var div = document.createElement ('div');
         div.className = "item";
         div.innerHTML = "<div class=\"name\">" + jsObjBySkill[key1][key2][i].username +
-        "</div>" + jsObjBySkill[key1][key2][i].name +
-        "<div class=\"bio\">" + jsObjBySkill[key1][key2][i].bio + "</div>";
+          "</div>" + jsObjBySkill[key1][key2][i].name +
+          "<div class=\"bio\">" + jsObjBySkill[key1][key2][i].bio + "</div>";
         right.appendChild (div);
         div.onclick = (function (x) {
           return function () {
@@ -142,7 +142,7 @@ function skills () {
         })(i);
       }
     }
-    
+
     for (var i in jsObjBySkill) {
       if (jsObjBySkill.hasOwnProperty (i)) {
         var div = document.createElement ('div');
@@ -163,9 +163,9 @@ function skills () {
         })(div);
       }
     }
-    
+
     left.getElementsByClassName ('item')[0].className = 'item selected';
     loadMiddle (left.getElementsByClassName ('item')[0].innerHTML);
-      
+
   });
 }

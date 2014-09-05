@@ -1,5 +1,5 @@
 function changePage (page) {
-  
+
   var jsonObj;
   // Code from http://www.tutorialspoint.com/json/json_ajax_example.htm
   function loadJSON (callbackfunction) {
@@ -35,7 +35,7 @@ function changePage (page) {
     http_request.send ();
     return true;
   }
-  
+
   //custom code
   var customcommands = {
     home: function () {
@@ -43,7 +43,7 @@ function changePage (page) {
       while (imgurl.indexOf ("\"") != -1) {
         imgurl = imgurl.replace ("\"", "");
       }
-      
+
       var img = new Image();
       img.src = imgurl;
       img.onload = function () {
@@ -64,13 +64,13 @@ function changePage (page) {
       skills ();
     }
   }
-  
+
   loadJSON (function (jsonObj) {
-    
+
     slider != null ? slider.stop() : console.log ('oops');
     window.onscroll = function () {};
     window.onresize = function () {};
-    
+
     document.title = jsonObj.page.title;
     var prev;
     var iter = 0;
@@ -104,9 +104,9 @@ function changePage (page) {
     document.body.className = jsonObj.page.classes.join (' ');
     document.getElementsByClassName ('changing')[0].innerHTML = jsonObj.page.content[0];
     document.getElementsByClassName ('changing')[1].innerHTML = jsonObj.page.content[1];
-    
+
     window.history.pushState(page, page, "/" + page);
-    
+
     customcommands[page] ();
   });
 }
